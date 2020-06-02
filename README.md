@@ -11,9 +11,9 @@ In the Fall of 2019, a colleague and I launched the Monitoring of Beneficial Bir
 **Dallas Glazik - dglazik@gmail.com**<br />
 Outreach, communication, grants coordinator<br />
 **Noah Horsley - nphorsley59@gmail.com**<br />
-Surveys, analysis, project coordinator<br />
+Surveyor, analysist, project coordinator<br />
 **Colin Dobson - cdobson2@illinois.edu**<br />
-Surveys, undergraduate researcher
+Surveyor, undergraduate researcher
 
 ### Enrolled Farms
 Cow Creek (400 acres)<br />
