@@ -5,6 +5,11 @@ Skills Demonstrated: *multi-variate analysis, regression, multi-collinearity tes
 Libraries: *pandas, matplot, seaborn*
 
 ### Project Overview
+Using a competition dataset from Kaggle with over 75 explanatory variables, I created a model that predicts the sale price of a house in Ames, Iowa based on its description. The purpose of this project was to demonstrate my ability to use exploratory data analysis on large, complicated datasets to produce a reliable predictive model.
+
+### Analysis
+
+### Results
 
 ### Resources
 https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview
@@ -30,8 +35,9 @@ D & Q (80 acres)<br />
 J & W (160 acres)<br />
 R Wildflower & Fields (160 acres)
 
+### Analysis
+
 ### Results 
-(updated 5/31/2020)
 
 ### Resources
 https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf
