@@ -4,6 +4,9 @@
 **Key Skills:** *multi-variate analysis, regression, multi-collinearity testing, exploratory data analysis*<br />
 **Libraries:** *pandas, matplot, seaborn*
 
+### Project Overview
+
+
 ## 2. Avian Abundance and Diversity Project 
 **Key Skills:** *data sourcing, data wrangling, data cleaning, exploratory data analysis*<br />
 **Libraries:** *pandas, matplot, seaborn*
