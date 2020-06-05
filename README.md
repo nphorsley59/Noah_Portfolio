@@ -1,8 +1,8 @@
 # Noah's Portfolio
 
 ## 1. House Sale Price Model
-*Key Skills: multi-variate analysis, regression, multi-collinearity testing, exploratory data analysis*<br />
-*Libraries: pandas, matplot, seaborn*
+Key Skills: *multi-variate analysis, regression, multi-collinearity testing, exploratory data analysis*<br />
+Libraries: *pandas, matplot, seaborn*
 
 ### Project Overview
 
