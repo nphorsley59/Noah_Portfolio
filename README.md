@@ -5,7 +5,7 @@ Skills Demonstrated: *multi-variate analysis, regression, multi-collinearity tes
 Libraries: *pandas, matplot, seaborn*
 
 ### Project Overview
-Using a competition dataset from Kaggle with over 75 explanatory variables, I created a model that predicts the sale price of a house in Ames, Iowa based on its description. The purpose of this project was to demonstrate my ability to use exploratory data analysis on large, complicated datasets to produce a reliable predictive model.
+Using a competition dataset from Kaggle with over 75 explanatory variables, I created a model that predicts the sale price of a house in Ames, Iowa based on its description. The purpose of this project was to demonstrate my ability to use an exploratory data analysis on a large, complicated dataset to produce a reliable predictive model.
 
 ### Analysis
 
