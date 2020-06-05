@@ -6,6 +6,8 @@
 
 ### Project Overview
 
+### Resources
+https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview
 
 ## 2. Avian Abundance and Diversity Project 
 **Key Skills:** *data sourcing, data wrangling, data cleaning, exploratory data analysis*<br />
@@ -31,7 +33,7 @@ R Wildflower & Fields (160 acres)
 ### Results 
 (updated 5/31/2020)
 
-### Sources
+### Resources
 https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf
 
 ## 3. Partial Life-cycle Matrix Model
