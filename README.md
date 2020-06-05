@@ -1,7 +1,7 @@
 # Noah's Portfolio
 
 ## 1. House Sale Price Model
-Skills: *multi-variate analysis, regression, multi-collinearity testing, exploratory data analysis*<br />
+Skills Demonstrated: *multi-variate analysis, regression, multi-collinearity testing, exploratory data analysis*<br />
 Libraries: *pandas, matplot, seaborn*
 
 ### Project Overview
@@ -10,7 +10,7 @@ Libraries: *pandas, matplot, seaborn*
 https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview
 
 ## 2. Avian Abundance and Diversity Project 
-Skills: *data sourcing, data wrangling, data cleaning, exploratory data analysis*<br />
+Skills Demonstrated: *data sourcing, data wrangling, data cleaning, exploratory data analysis*<br />
 Libraries: *pandas, matplot, seaborn*
 
 ### Project Overview
@@ -37,6 +37,6 @@ R Wildflower & Fields (160 acres)
 https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf
 
 ## 3. Partial Life-cycle Matrix Model
-Skills: *data simulation, predictive modeling, problem solving*<br />
+Skills Demonstrated: *data simulation, predictive modeling, problem solving*<br />
 
 ### Project Overview
