@@ -44,5 +44,12 @@ https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf
 
 ## 3. Partial Life-cycle Matrix Model
 Skills Demonstrated: *data simulation, predictive modeling, problem solving*<br />
+Libraries: *pandas, numpy, matplot, copy*
 
 ### Project Overview
+As part of my Master's degree, I built a partial life-cycle matrix model and used it to predict the survival rate of Common Grackles (blackbird) during the non-breeding season. The model simulates realistic population growth and has a wide range of additional functionalities that extend beyond the scope of my thesis, including a flexible parameter design, built-in elasticity analysis capabilities, stable age distribution estimates, and much more. I am in the process of publishing the results produced by this model in my Master's thesis. I am also using this model to do predictive modeling for another publication looking at Micronesian Starling demography on the island of Guam.
+
+### Analysis
+
+### Results
+
