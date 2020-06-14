@@ -13,8 +13,8 @@ Using a competition dataset from Kaggle with over 75 explanatory variables, I cr
 
 ### Resources
 https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview
-
 <br>
+
 ## 2. Avian Abundance and Diversity Project 
 Skills Demonstrated: *data sourcing, data wrangling, data cleaning, exploratory data analysis*<br />
 Libraries: *pandas, numpy, matplot, seaborn*
@@ -42,8 +42,8 @@ R Wildflower & Fields (160 acres)
 
 ### Resources
 https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf
-
 <br>
+
 ## 3. Partial Life-cycle Matrix Model
 Skills Demonstrated: *data simulation, predictive modeling, problem solving*<br />
 Libraries: *pandas, numpy, matplot, copy*
