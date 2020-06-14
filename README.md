@@ -53,13 +53,13 @@ As part of my Master's degree, I built a partial life-cycle matrix model and use
 The first stage simulates population growth over a pre-defined trial period to transform a single population variable into an array representing stable age distribution. 
 
 #### Stage 2
-The second stage proportionally adjusts the stable age distribution array to represent the desired initial population size. From here, population growth is simulated for the length of time defined by the user.
+The second stage proportionally adjusts the stable age distribution array to represent the desired initial population size. From here, population growth is simulated over the length of time defined by the user.
 
 #### Stage 3
-The third and final stage averages annual population size and growth over the number of simulations defined by the user. Using this data, it then plots mean population size with confidence intervals and calculates an annual trend estimate for the population.
+The third and final stage averages annual population size and growth over the number of simulations defined by the user. It then plots mean population size with confidence intervals and calculates an annual trend estimate.
 
 #### Additional Functionality
-The three stages outlined above describe the most simplistic modeling approach and gloss over several important details. Please feel free to ask about age classes, fecundity, age-specific survival, stochasticity, elasticity analysis, or any other modeling details.
+The three stages outlined above describe the most simplistic modeling approach. Additional details and feature descriptions can be found in the MatrixModel_AdvFunc.txt file included in this repository.
 
 ### <div align="center">Results</div>
 
