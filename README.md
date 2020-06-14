@@ -44,22 +44,22 @@ https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf
 
 ## 3. Partial Life-cycle Matrix Model
 Skills Demonstrated: *data simulation, predictive modeling, problem solving*<br />
-Libraries: *pandas, numpy, matplot, copy*
+Libraries: *pandas, numpy, matplot, copy*<br />
 
 ### <div align="center">Project Overview</div>
 As part of my Master's degree, I built a partial life-cycle matrix model and used it to predict the survival rate of Common Grackles (blackbird) during the non-breeding season. The model simulates realistic population growth and has a wide range of additional functionalities that extend beyond the scope of my thesis, including a flexible parameter design, built-in elasticity analysis capabilities, stable age distribution estimates, and much more. I am in the process of publishing the results produced by this model in my Master's thesis. I am also using this model to do predictive modeling for another publication looking at Micronesian Starling demography on the island of Guam.
 
 ### <div align="center">Analysis</div>
-#### Stage 1
+##### Stage 1
 The first stage simulates population growth over a pre-defined trial period to transform a single population variable into an array representing stable age distribution. 
 
-#### Stage 2
+##### Stage 2
 The second stage proportionally adjusts the stable age distribution array to represent the desired initial population size. From here, population growth is simulated for the length of time defined by the user.
 
-#### Stage 3
+##### Stage 3
 The third and final stage averages annual population size and growth over the number of simulations defined by the user. Using this data, it then plots mean population size with confidence intervals and calculates an annual trend estimate for the population.
 
-#### Additional Functionality
+##### Additional Functionality
 The three stages outlined above describe the most simplistic modeling approach and gloss over several important details. Please feel free to ask about age classes, fecundity, age-specific survival, stochasticity, elasticity analysis, or any other modeling details.
 
 ### <div align="center">Results</div>
