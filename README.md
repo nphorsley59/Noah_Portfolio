@@ -1,5 +1,7 @@
 # Noah's Portfolio
 
+<br>
+
 ## 1. House Sale Price Model
 Skills Demonstrated: *multi-variate analysis, regression, multi-collinearity testing, exploratory data analysis*<br />
 Libraries: *pandas, matplot, seaborn*
@@ -13,6 +15,7 @@ Using a competition dataset from Kaggle with over 75 explanatory variables, I cr
 
 ### Resources
 https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview
+
 <br>
 
 ## 2. Avian Abundance and Diversity Project 
@@ -42,6 +45,7 @@ R Wildflower & Fields (160 acres)
 
 ### Resources
 https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf
+
 <br>
 
 ## 3. Partial Life-cycle Matrix Model
