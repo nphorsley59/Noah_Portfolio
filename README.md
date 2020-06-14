@@ -42,7 +42,8 @@ R Wildflower & Fields (160 acres)
 ### Resources
 https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf
 
-
+<br>
+<br>
 
 ## 3. Partial Life-cycle Matrix Model
 Skills Demonstrated: *data simulation, predictive modeling, problem solving*<br />
