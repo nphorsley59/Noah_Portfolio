@@ -50,7 +50,7 @@ https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf
 
 ## 3. Partial Life-cycle Matrix Model
 Skills Demonstrated: *data simulation, predictive modeling, problem solving*<br />
-Libraries: *pandas, numpy, matplot, copy*
+Libraries: *pandas, numpy, matplot, copy*<br />
 Filename: PLC_MatrixModel.py
 
 ### <div align="center">Project Overview</div>
