@@ -69,9 +69,16 @@ The third and final stage averages annual population size and growth over the nu
 The three stages outlined above describe the most simplistic modeling approach. Additional details and feature descriptions can be found in the PLC_MatrixModel_AdvFunc.txt file included in this repository.
 
 ### <div align="center">Results</div>
+
+A matrix model uses matrices to track population growth across age classes (Table 1). This model structure allows the user to input age-specific survival and fecundity for more accurate modeling results. 
+
 **Table 1.** A sample of the age matrix dataframe that shows population distribution across age classes.<br />
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/Pop_Matrix_Table1.png "Age Matrix")<br />
 
+In order to account for environmental stochasticity, natural variation is built into each rate based on real data collected in the field. As a result, each simulation produces slightly different results (Table 2). 
+
 **Table 2.** A sample of the population growth dataframe that show population growth across simulations.<br />
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/Pop_Growth_Table1.png "Population Growth")<br />
+
+**Figure 1.** 
 
