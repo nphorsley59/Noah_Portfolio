@@ -70,7 +70,8 @@ The three stages outlined above describe the most simplistic modeling approach. 
 
 ### <div align="center">Results</div>
 **Table 1.** Sample of the age matrix dataframe.<br />
-![alt text](https://github.com/nphorsley59/Portfolio/blob/master/Pop_Matrix_Table1.png "Age Matrix")
+![alt text](https://github.com/nphorsley59/Portfolio/blob/master/Pop_Matrix_Table1.png "Age Matrix")<br />
+
 **Table 2.** Sample of the population growth dataframe.<br />
-![alt text](https://github.com/nphorsley59/Portfolio/blob/master/Pop_Growth_Table1.png "Population Growth")
+![alt text](https://github.com/nphorsley59/Portfolio/blob/master/Pop_Growth_Table1.png "Population Growth")<br />
 
