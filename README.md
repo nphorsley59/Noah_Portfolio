@@ -86,4 +86,5 @@ For my thesis, we used established demographic rates from the literature and est
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/Model_Parameters_Table1.png "Model Parameters")<br />
 
 **Figure 1.** Population growth projections using predictions of non-breeding survival for three distinct populations.<br />
+
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/Pred_Pop_Growth_Figure1.png "Predicted Population Growth")<br />
