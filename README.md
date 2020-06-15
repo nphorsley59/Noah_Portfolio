@@ -69,5 +69,5 @@ The third and final stage averages annual population size and growth over the nu
 The three stages outlined above describe the most simplistic modeling approach. Additional details and feature descriptions can be found in the PLC_MatrixModel_AdvFunc.txt file included in this repository.
 
 ### <div align="center">Results</div>
-![alt text](https://github.com/nphorsley59/Portfolio/Pop_Growth_Table1.png "Population Growth Table")
+![alt text](https://github.com/nphorsley59/Portfolio/blob/master/Pop_Growth_Table1.png "Population Growth Table")
 
