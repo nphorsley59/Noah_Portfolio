@@ -89,4 +89,8 @@ For my thesis, we used established demographic rates from the literature and est
 
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/Proj_Pop_Growth_Figure1.png "Predicted Population Growth")<br />
 
+**Figure 2.** A sample of simulations produced by the model, replicating stable growth.<br />
+
+![alt text](https://github.com/nphorsley59/Portfolio/blob/master/livesim_plot_50sims.gif "Simulation Animation")<br />
+
 ### <div align="center">Summary</div>
