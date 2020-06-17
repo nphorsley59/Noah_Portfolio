@@ -94,6 +94,7 @@ For my thesis, we used established demographic rates from the literature and est
 
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/NBS_Survival_Predictions_Table1.png "Model Predictions")<br />
 <br />
+
 **Figure 1.** Population growth projections using predictions of non-breeding survival for three distinct populations.<br />
 
 
