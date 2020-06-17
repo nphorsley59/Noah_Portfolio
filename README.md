@@ -91,6 +91,6 @@ For my thesis, we used established demographic rates from the literature and est
 
 **Figure 2.** A sample of simulations produced by the model, replicating projected decline in Illinois.<br />
 
-![alt text](https://github.com/nphorsley59/Portfolio/blob/master/livesim_plot_50sims.gif "Simulation Animation")<br />
+![alt text](https://github.com/nphorsley59/Portfolio/blob/master/livesim_plot_24sims.gif "Simulation Animation")<br />
 
 ### <div align="center">Summary</div>
