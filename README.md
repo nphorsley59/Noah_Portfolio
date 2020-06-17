@@ -96,6 +96,7 @@ For my thesis, we used established demographic rates from the literature and est
 
 **Figure 1.** Population growth projections using predictions of non-breeding survival for three distinct populations.<br />
 
+
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/Proj_Pop_Growth_Figure1.png "Predicted Population Growth")<br />
 
 To show the effect of environmental variation in the model, I have included an animated plot of 24 sample simulations run using predicted non-breeding season survival for Illinois (Figure 2).
