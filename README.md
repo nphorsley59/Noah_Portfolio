@@ -72,13 +72,13 @@ The three stages outlined above describe the most simplistic modeling approach. 
 
 ### <div align="center">Results</div>
 
-A matrix model uses matrices to track population growth across age classes (Table 1). This model structure allows the user to input age-specific survival and fecundity for more accurate modeling results. 
+Matrix models use matrices to track population growth across age classes (Table 1). This model structure allowed me to input age-specific survival and fecundity for more accurate modeling results. 
 
 **Table 1.** A sample of the age matrix dataframe that shows population distribution across age classes.<br />
 
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/Pop_Matrix_Table1.png "Age Matrix")<br />
 
-In order to account for environmental stochasticity, natural variation is built into each rate based on real data collected in the field. As a result, each simulation produces slightly different results (Table 2). 
+In order to account for environmental stochasticity, I built natural variation into each rate based on real data collected in the field. As a result, each simulation produces slightly different results (Table 2, Figure 2). 
 
 **Table 2.** A sample of the population growth dataframe that show population growth across simulations.<br />
 
@@ -99,10 +99,8 @@ For my thesis, we used established demographic rates from the literature and est
 
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/Proj_Pop_Growth_Figure1.png "Predicted Population Growth")<br />
 
-To show the effect of environmental variation in the model, I have included an animated plot of 24 sample simulations run using predicted non-breeding season survival for Illinois (Figure 2).
-
 **Figure 2.** A sample of simulations produced by the model, replicating projected decline in Illinois.<br />
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/livesim_plot_24sims.gif "Simulation Animation")
 ### <div align="center">Summary</div>
 
-The partial life-cycle matrix model I built for my Master's thesis successfully reproduced population decline in my study species, the Common Grackle, and was used to predict rates of non-breeding season survival that were realistic for three distinct populations: a stable population, the current global population, and the current Illinois population (Table 4). This modeling approach allowed me to incorporate several demographic parameters and account for realistic environmental variation. It was also built to be adaptable, and will likely be reused for analysis related to other research questions in the future.
+The partial life-cycle matrix model I built for my Master's thesis successfully reproduced population decline in my study species, the Common Grackle, and was used to predict rates of non-breeding season survival that were realistic for three distinct populations: a stable population, the current global population, and the current Illinois population. This modeling approach allowed me to incorporate several demographic parameters and account for realistic environmental variation. I learned a lot about model design, custom functions, and advanced visualization techniques from this project and am excited to reuse this model to answer other research questions in the future.
