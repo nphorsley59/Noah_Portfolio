@@ -4,7 +4,7 @@
 
 ## 1. House Sale Price Model
 Skills Demonstrated: *multi-variate analysis, regression, multi-collinearity testing, exploratory data analysis*<br />
-Libraries: *pandas, matplot, seaborn*
+Libraries: *pandas, matplotlib, seaborn*
 
 ### Project Overview
 Using a competition dataset from Kaggle with over 75 explanatory variables, I created a model that predicts the sale price of a house in Ames, Iowa based on its description. The purpose of this project was to demonstrate my ability to use an exploratory data analysis on a large, complicated dataset to produce a reliable predictive model.
@@ -20,7 +20,7 @@ https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview
 
 ## 2. Avian Abundance and Diversity Project 
 Skills Demonstrated: *data sourcing, data wrangling, data cleaning, exploratory data analysis*<br />
-Libraries: *pandas, numpy, matplot, seaborn*
+Libraries: *pandas, numpy, matplotlib, seaborn*
 
 ### Project Overview
 In the Fall of 2019, a colleague and I launched the Monitoring of Beneficial Birds in Agricultural Ecosystems initiative. The purpose of this project is to connect sustainable land use practices with changes in native bird communities. We are particularly interested in species that provide ecosystem services or are of conservation concern. To date, we have completed two survey seasons (Fall 2019 and Spring 2020) at five organic farms in Ford County, Illinois. Our current goal is to secure an additional 5 years of funding ($10,000) to support seasonal surveys and an undergraduate researcher at the University of Illinois.
@@ -50,7 +50,7 @@ https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf
 
 ## 3. Partial Life-cycle Matrix Model
 Skills Demonstrated: *data simulation, predictive modeling, custom functions, feature engineering*<br />
-Libraries: *pandas, numpy, matplot, copy*<br />
+Libraries: *pandas, numpy, matplotlib, math, copy*<br />
 Filename: PLC_MatrixModel.py
 
 ### <div align="center">Project Overview</div>
