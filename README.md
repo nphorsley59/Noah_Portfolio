@@ -56,7 +56,7 @@ Filename: PLC_MatrixModel.py
 ### <div align="center">Project Overview</div>
 As part of my Master's degree, I built a partial life-cycle matrix model and used it to predict the survival rate of Common Grackles (blackbird) during the non-breeding season. The model simulates realistic population growth and has a wide range of additional functionalities that extend beyond the scope of my thesis, including a flexible parameter design, built-in elasticity analysis capabilities, stable age distribution estimates, and much more. I am in the process of publishing the results produced by this model. I am also using this model to do predictive modeling for another publication investigating Micronesian Starling demography on the island of Guam.
 
-### <div align="center">The Basics</div>
+### <div align="center">Model Structure</div>
 
 #### Stage 1
 The first modeling stage simulates population growth over a pre-defined trial period to transform a single population variable into an array representing stable age distribution. 
