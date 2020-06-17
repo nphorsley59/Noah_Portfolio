@@ -54,7 +54,7 @@ Libraries: *pandas, numpy, matplotlib, math, copy*<br />
 Filename: PLC_MatrixModel.ipynb
 
 ### <div align="center">Project Overview</div>
-As part of my Master's degree, I built a partial life-cycle matrix model and used it to predict the survival rate of Common Grackles (blackbird) during the non-breeding season. The model simulates realistic population growth and has several additional features that extend beyond the scope of my thesis. I am in the process of publishing the results produced by this model. I am also using this model to do predictive modeling for another publication investigating Micronesian Starling demography on the island of Guam.
+As part of my Master's thesis, I built a partial life-cycle matrix model and used it to predict the survival rate of Common Grackles (blackbird) during the non-breeding season. The model simulates realistic population growth and has several additional features that extend beyond the scope of my research. I am in the process of publishing the results produced by this model. I am also using this model to do predictive modeling for another publication investigating Micronesian Starling demography on the island of Guam.
 
 ### <div align="center">Model Structure</div>
 
