@@ -75,19 +75,23 @@ The three stages outlined above describe the most simplistic modeling approach. 
 A matrix model uses matrices to track population growth across age classes (Table 1). This model structure allows the user to input age-specific survival and fecundity for more accurate modeling results. 
 
 **Table 1.** A sample of the age matrix dataframe that shows population distribution across age classes.<br />
+
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/Pop_Matrix_Table1.png "Age Matrix")<br />
 
 In order to account for environmental stochasticity, natural variation is built into each rate based on real data collected in the field. As a result, each simulation produces slightly different results (Table 2). 
 
 **Table 2.** A sample of the population growth dataframe that show population growth across simulations.<br />
+
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/Pop_Growth_Table1.png "Population Growth")<br />
 
 For my thesis, we used established demographic rates from the literature and estimated demographic rates from our own research (Table 3) to predict non-breeding season survival in three distinct populations: a stable population, the current global population, and the current Illinois population (Table 4, Figure 1). 
 
 **Table 3.** The model parameters used to predict non-breeding season survival.<br />
+
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/Model_Parameters_Table1.png "Model Parameters")<br />
 
 **Table 4.** The predicted rates of non-breeding season survival for each population.<br />
+
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/NBS_Survival_Predictions_Table1.png "Model Predictions")<br />
 
 **Figure 1.** Population growth projections using predictions of non-breeding survival for three distinct populations.<br />
