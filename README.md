@@ -80,10 +80,13 @@ In order to account for environmental stochasticity, natural variation is built 
 **Table 2.** A sample of the population growth dataframe that show population growth across simulations.<br />
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/Pop_Growth_Table1.png "Population Growth")<br />
 
-For my thesis, we used established demographic rates from the literature and estimated demographic rates from our own research (Table 3) to predict non-breeding season survival in three distinct populations: a stable population, the current global population, and the current Illinois population (Figure 1). 
+For my thesis, we used established demographic rates from the literature and estimated demographic rates from our own research (Table 3) to predict non-breeding season survival in three distinct populations: a stable population, the current global population, and the current Illinois population (Table 4, Figure 1). 
 
 **Table 3.** The model parameters used to predict non-breeding season survival.<br />
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/Model_Parameters_Table1.png "Model Parameters")<br />
+
+**Table 4.** The predicted rates of non-breeding season survival for each population.<br />
+![alt text]("Predicted Non-breeding Survival")<br />
 
 **Figure 1.** Population growth projections using predictions of non-breeding survival for three distinct populations.<br />
 
