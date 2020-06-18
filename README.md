@@ -103,7 +103,7 @@ For my thesis, we used established demographic rates from the literature and est
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/PLC_MatrixModel_Figures/livesim_plot_24sims.gif "Simulation Animation")
 ### <div align="center">Summary</div>
 
-The partial life-cycle matrix model I built for my Master's thesis projected population decline in my study species, the Common Grackle, and was used to predict rates of non-breeding season survival for three distinct populations: a stable population, the current global population, and the current Illinois population. This modeling approach allowed me to use many demographic parameters and account for realistic environmental variation. I learned a lot about model design, custom functions, and advanced visualization techniques from this project and am excited to reuse the model to answer other research questions in the future.
+The partial life-cycle matrix model I built for my Master's thesis was used to project population decline in my study species, the Common Grackle, and to predict rates of non-breeding season survival for three distinct populations: a stable population, the current global population, and the current Illinois population. The modeling approach I chose allowed me to use many demographic parameters and account for realistic environmental variation. I learned a lot about model design, custom functions, and advanced visualization techniques from this project and am excited to reuse the model to answer other research questions in the future.
 
 ### <div align="center">Resources</div>
 https://birdsoftheworld.org/bow/species/comgra/cur/introduction<br />
