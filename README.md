@@ -34,7 +34,7 @@ Surveyor, analyst, project coordinator<br />
 Surveyor, undergraduate researcher<br />
 
 **Enrolled Farms**<br />
-Cow Creek (400 acres)<br />
+Cow Creek (400 acres)<sup>1</sup><br />
 Craver Trust (200 acres)<br />
 J & W (160 acres)<br />
 R Wildflower & Fields (160 acres)
@@ -42,15 +42,16 @@ D & Q (80 acres)<br />
 
 ### <div align="center">Data Wrangling</div>
 
-When collecting and entering avian count data in North America, 4-letter "Alpha" codes are used. While these codes are meaningful to ornithologists, they do a poor job of communicating study results to the general public.
+Avian count data is collected and entered as 4-letter "Alpha" codes. While these codes are meaningful to ornithologists, they do a poor job of communicating study results to the general public. I decided I'd need to present full species names when reporting data for this project. I used data wrangling techniques to turn a table published by The Institute for Bird Populations<sup>2</sup> into a Python dictionary. I then used this dictionary to connect the 4-letter "Alpha" codes in my dataset to the full English species names.
 
 ### <div align="center">Data Cleaning</div>
 
 ### <div align="center">Tableau Visualizations</div>
 
 ### <div align="center">Resources</div>
-https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf<br />
-https://www.cowcreekorganics.com/about
+<sup>1</sup> https://www.cowcreekorganics.com/about<br />
+<sup>2</sup> https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf<br />
+
 
 <br>
 
