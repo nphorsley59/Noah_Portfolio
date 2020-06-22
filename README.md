@@ -18,9 +18,10 @@ https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview
 
 <br>
 
-## 2. Avian Abundance and Diversity Project 
+## 2. Avian Abundance and Diversity Project
 Skills Demonstrated: *data sourcing, data wrangling, data cleaning, exploratory data analysis*<br />
 Libraries and Programs: *pandas, numpy, Tableau*<br />
+Filename(s): AAD_DataCleaning.py, AAD_DataWrangling.py
 
 ### <div align="center">Project Overview</div>
 In the Fall of 2019, a colleague and I launched the Monitoring of Beneficial Birds in Agricultural Ecosystems initiative. The purpose of this project is to connect sustainable land use practices with changes in native bird communities. We are particularly interested in species that provide ecosystem services or are of conservation concern. To date, we have completed two survey seasons (Fall 2019 and Spring 2020) at five organic farms in Ford County, Illinois. Our current goal is to secure an additional 5 years of funding ($10,000) to support seasonal surveys and an undergraduate researcher at the University of Illinois.
@@ -28,7 +29,7 @@ In the Fall of 2019, a colleague and I launched the Monitoring of Beneficial Bir
 **Dallas Glazik - dglazik@gmail.com**<br />
 Outreach, communication, grants coordinator<br />
 **Noah Horsley - nphorsley59@gmail.com**<br />
-Surveyor, analysist, project coordinator<br />
+Surveyor, analyst, project coordinator<br />
 **Colin Dobson - cdobson2@illinois.edu**<br />
 Surveyor, undergraduate researcher
 
@@ -39,9 +40,11 @@ D & Q (80 acres)<br />
 J & W (160 acres)<br />
 R Wildflower & Fields (160 acres)
 
-### <div align="center">Analysis</div>
+### <div align="center">Data Wrangling</div>
 
-### <div align="center">Results</div>
+### <div align="center">Data Cleaning</div>
+
+### <div align="center">Tableau Visualizations</div>
 
 ### <div align="center">Resources</div>
 https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf
@@ -51,7 +54,7 @@ https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf
 ## 3. Partial Life-cycle Matrix Model
 Skills Demonstrated: *data simulation, predictive modeling, custom functions, feature engineering*<br />
 Libraries: *pandas, numpy, matplotlib, math, copy*<br />
-Filename: PLC_MatrixModel.ipynb
+Filename(s): PLC_MatrixModel.ipynb
 
 ### <div align="center">Project Overview</div>
 As part of my Master's thesis, I built a partial life-cycle matrix model and used it to predict the survival rate of Common Grackles (blackbird) during the non-breeding season. The model simulates realistic population growth and has several additional features that extend beyond the scope of my research. I am in the process of publishing the results produced by this model. I am also using this model to do predictive modeling for another publication investigating Micronesian Starling demography on the island of Guam.
