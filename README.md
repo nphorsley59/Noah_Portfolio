@@ -61,7 +61,7 @@ Libraries and Programs: *Python, Jupyter Notebook, pandas, numpy, matplotlib, ma
 Filename(s): PLC_MatrixModel.ipynb
 
 ### <div align="center">Project Overview</div>
-As part of my Master's thesis, I built a partial life-cycle matrix model and used it to predict the survival rate of Common Grackles (blackbird) during the non-breeding season. The model simulates realistic population growth and has several additional features that extend beyond the scope of my research. I am in the process of publishing the results produced by this model. I am also using this model to do predictive modeling for another publication investigating Micronesian Starling demography on the island of Guam.
+As part of my Master's thesis, I built a partial life-cycle matrix model<sup>1</sup> and used it to predict the survival rate of Common Grackles<sup>2</sup> during the non-breeding season. The model simulates realistic population growth and has several additional features that extend beyond the scope of my research. I am in the process of publishing the results produced by this model. I am also using this model to do predictive modeling for another publication investigating Micronesian Starling demography on the island of Guam.
 
 ### <div align="center">Model Structure</div>
 
@@ -113,5 +113,5 @@ For my thesis, we used established demographic rates from the literature and est
 The partial life-cycle matrix model I built for my Master's thesis was used to project population decline in my study species, the Common Grackle, and to predict rates of non-breeding season survival for three distinct populations: a stable population, the current global population, and the current Illinois population. The modeling approach I chose allowed me to use many demographic parameters and account for realistic environmental variation. I learned a lot about model design, custom functions, and advanced visualization techniques from this project and am excited to reuse the model to answer other research questions in the future.
 
 ### <div align="center">Resources</div>
-https://birdsoftheworld.org/bow/species/comgra/cur/introduction<br />
-https://onlinelibrary.wiley.com/doi/abs/10.1034/j.1600-0706.2001.930303.x
+<sup>1</sup> https://onlinelibrary.wiley.com/doi/abs/10.1034/j.1600-0706.2001.930303.x
+<sup>2</sup> https://birdsoftheworld.org/bow/species/comgra/cur/introduction<br />
