@@ -42,6 +42,8 @@ D & Q (80 acres)<br />
 
 ### <div align="center">Data Wrangling</div>
 
+When collecting and entering avian count data in North America, 4-letter "Alpha" codes are used. While these codes are meaningful to ornithologists, they do a poor job of communicating study results to the general public.
+
 ### <div align="center">Data Cleaning</div>
 
 ### <div align="center">Tableau Visualizations</div>
