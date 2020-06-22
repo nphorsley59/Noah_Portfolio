@@ -31,9 +31,9 @@ Outreach, communication, grants coordinator<br />
 **Noah Horsley - nphorsley59@gmail.com**<br />
 Surveyor, analyst, project coordinator<br />
 **Colin Dobson - cdobson2@illinois.edu**<br />
-Surveyor, undergraduate researcher
+Surveyor, undergraduate researcher<br />
 
-### <div align="center">Enrolled Farms</div>
+**Enrolled Farms**<br />
 Cow Creek (400 acres)<br />
 Craver Trust (200 acres)<br />
 D & Q (80 acres)<br />
