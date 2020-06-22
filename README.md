@@ -4,7 +4,7 @@
 
 ## 1. House Sale Price Model
 Skills Demonstrated: *multi-variate analysis, regression, multi-collinearity testing, exploratory data analysis*<br />
-Libraries: *pandas, matplotlib, seaborn*
+Libraries and Programs: *pandas, matplotlib, seaborn*
 
 ### Project Overview
 Using a competition dataset from Kaggle with over 75 explanatory variables, I created a model that predicts the sale price of a house in Ames, Iowa based on its description. The purpose of this project was to demonstrate my ability to use an exploratory data analysis on a large, complicated dataset to produce a reliable predictive model.
@@ -20,7 +20,7 @@ https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview
 
 ## 2. Avian Abundance and Diversity Project
 Skills Demonstrated: *data sourcing, data wrangling, data cleaning, exploratory data analysis*<br />
-Libraries and Programs: *pandas, numpy, Tableau*<br />
+Libraries and Programs: *Python, Spyder, Tableau, pandas, numpy*<br />
 Filename(s): AAD_DataCleaning.py, AAD_DataWrangling.py
 
 ### <div align="center">Project Overview</div>
@@ -53,7 +53,7 @@ https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf
 
 ## 3. Partial Life-cycle Matrix Model
 Skills Demonstrated: *data simulation, predictive modeling, custom functions, feature engineering*<br />
-Libraries: *pandas, numpy, matplotlib, math, copy*<br />
+Libraries and Programs: *Python, Jupyter Notebook, pandas, numpy, matplotlib, math, copy*<br />
 Filename(s): PLC_MatrixModel.ipynb
 
 ### <div align="center">Project Overview</div>
