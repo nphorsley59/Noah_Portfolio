@@ -20,9 +20,9 @@ https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview
 
 ## 2. Avian Abundance and Diversity Project 
 Skills Demonstrated: *data sourcing, data wrangling, data cleaning, exploratory data analysis*<br />
-Libraries: *pandas, numpy, matplotlib, seaborn*
+Libraries and Programs: *pandas, numpy, Tableau*<br />
 
-### Project Overview
+### <div align="center">Project Overview</div>
 In the Fall of 2019, a colleague and I launched the Monitoring of Beneficial Birds in Agricultural Ecosystems initiative. The purpose of this project is to connect sustainable land use practices with changes in native bird communities. We are particularly interested in species that provide ecosystem services or are of conservation concern. To date, we have completed two survey seasons (Fall 2019 and Spring 2020) at five organic farms in Ford County, Illinois. Our current goal is to secure an additional 5 years of funding ($10,000) to support seasonal surveys and an undergraduate researcher at the University of Illinois.
 
 **Dallas Glazik - dglazik@gmail.com**<br />
@@ -32,18 +32,18 @@ Surveyor, analysist, project coordinator<br />
 **Colin Dobson - cdobson2@illinois.edu**<br />
 Surveyor, undergraduate researcher
 
-### Enrolled Farms
+### <div align="center">Enrolled Farms</div>
 Cow Creek (400 acres)<br />
 Craver Trust (200 acres)<br />
 D & Q (80 acres)<br />
 J & W (160 acres)<br />
 R Wildflower & Fields (160 acres)
 
-### Analysis
+### <div align="center">Analysis</div>
 
-### Results 
+### <div align="center">Results</div>
 
-### Resources
+### <div align="center">Resources</div>
 https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf
 
 <br>
