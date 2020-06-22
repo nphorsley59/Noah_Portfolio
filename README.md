@@ -47,7 +47,7 @@ D & Q (80 acres)<br />
 ### <div align="center">Tableau Visualizations</div>
 
 ### <div align="center">Resources</div>
-https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf
+https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf<br />
 https://www.cowcreekorganics.com/about
 
 <br>
