@@ -50,7 +50,7 @@ Avian count data is collected and entered as 4-letter "Alpha" codes. While these
 
 **Figure 2.** The same sample after being transformed into a usable dictionary in Python.<br />
 
-![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Bird_Codes_Table2.png "Alpha Codes to English Names Dictionary")<br />
+![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Bird_Species_Codes_Table2.png "Alpha Codes to English Names Dictionary")<br />
 
 ### <div align="center">Data Cleaning</div>
 
