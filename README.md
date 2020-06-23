@@ -74,7 +74,15 @@ The second phase was to complete tasks identified in Phase 1. I used common inde
 
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Data_Cleaning_Table3.png "Moving Data with a Loop")<br />
 
-#### Phase 3
+#### Phase 3 - Quality Assurance
+The third phase was to repeat Phase 1 and, if necessary, Phase 2 to ensure nothing was missed in the initial cleaning process. In this particular project, I was unable to link English species names to the "Alpha" codes in my dataset until some obvious errors had been fixed i.e. until after Phases 1 and 2. However, after linking the English species names to the "Alpha" codes, it quickly became clear that errors existed in the "Alpha" codes column (Figure 6). These errors were difficult to catch in Phases 1 and 2 because they existed in a diverse categorical variable with no 'reference' set available for verification. I find this second round of cleaning, which I call "Quality Assurance", to be most useful in large or error-prone datasets.
+
+**Figure 6.** TEXT<br />
+
+![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Data_Cleaning_Table4.png "TEXT")<br />
+
+#### Phase 4 - Usability
+The final phase was to 
 
 ### <div align="center">Tableau Visualizations</div>
 
