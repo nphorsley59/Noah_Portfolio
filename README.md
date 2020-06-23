@@ -46,7 +46,7 @@ Avian count data is collected and entered as 4-letter "Alpha" codes. While these
 
 **Figure 1.** A small sample of the over 2,100 bird species that have been assigned 4-letter "Alpha" codes.<br />
 
-![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Bird_Codes_Table1.png "Alpha Codes to English Names Table")<br />
+![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Bird_Species_Codes_Table1.png "Alpha Codes to English Names Table")<br />
 
 **Figure 2.** The same sample after being transformed into a usable dictionary in Python.<br />
 
