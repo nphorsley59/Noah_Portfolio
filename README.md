@@ -56,18 +56,18 @@ Avian count data is collected and entered as 4-letter "Alpha" codes. While these
 
 After establishing an "Alpha" codes reference dictionary, I began cleaning the Monitoring of Beneficial Birds in Agricultural Ecosystems Initiative dataset. I find data cleaning to be most effecient and thorough when divided into phases. For this project, I used the following approach:
 
-#### Phase 1 - IDENTIFICATION
+#### Phase 1 - Identification
 The first phase was to identify general problems with the dataset. I used .dtypes and a .value_counts() loop to create a fast summary of each column. I then used this summary to list out obvious tasks (Figure 3). While this was a good start, I had not addressed the possibility of NaNs in the dataset. To view NaNs, I used .isna().sum().sort_values(ascending=False) to view NaNs by column (Figure 4). Again, I listed out any obvious cleaning tasks.
 
 **Figure 3.** <br />
 
-![alt text]()<br />
+![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Data_Cleaning_Table1.png "Data Cleaning Tasks")<br />
 
 **Figure 4.** <br />
 
-![alt text]()<br />
+![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Data_Cleaning_Table2.png "Table of NaNs by Column")<br />
 
-#### Phase 2
+#### Phase 2 - Cleaning
 
 #### Phase 3
 
