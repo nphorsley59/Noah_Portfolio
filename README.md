@@ -19,7 +19,7 @@ https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview
 <br>
 
 ## 2. Avian Abundance and Diversity Project
-Skills Demonstrated: *data sourcing, data wrangling, data cleaning, exploratory data analysis*<br />
+Skills Demonstrated: *data sourcing, data wrangling, data cleaning, lambda functions, exploratory data analysis*<br />
 Libraries and Programs: *Python, Spyder, Tableau, pandas, numpy*<br />
 Filename(s): AAD_DataCleaning.py, AAD_DataWrangling.py
 
@@ -59,15 +59,20 @@ After establishing an "Alpha" codes reference dictionary, I began cleaning the M
 #### Phase 1 - Identification
 The first phase was to identify general problems with the dataset. I used .dtypes and a .value_counts() loop to create a fast summary of each column. I then used this summary to list out obvious tasks (Figure 3). While this was a good start, I had not addressed the possibility of NaNs in the dataset. To view NaNs, I used .isna().sum().sort_values(ascending=False) to view NaNs by column (Figure 4). Again, I listed out any obvious cleaning tasks.
 
-**Figure 3.** <br />
+**Figure 3.** Commenting a list of cleaning tasks revealed by each data summary.<br /> 
 
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Data_Cleaning_Table1.png "Data Cleaning Tasks")<br />
 
-**Figure 4.** <br />
+**Figure 4.** A table showing the number of NaNs in each column.<br /> 
 
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Data_Cleaning_Table2.png "Table of NaNs by Column")<br />
 
 #### Phase 2 - Cleaning
+The second phase was to complete tasks identified in Phase 1. I used common indexing functions, such as .loc/iloc and .at/iat, to identify and address typos and other minor errors. More widespread problems were addressed using more aggressive functions and techniques, such as .replace(), .fillna(), lambda functions, loops, and custom functions (Figure 5).
+
+**Figure 5.** An example of a loop used to move data that had been entered into the wrong column.<br />
+
+![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Data_Cleaning_Table3.png "Moving Data with a Loop")<br />
 
 #### Phase 3
 
