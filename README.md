@@ -24,7 +24,7 @@ Libraries and Programs: *Python, Spyder, Tableau, pandas, numpy*<br />
 Filename(s): AAD_DataCleaning.py, AAD_DataWrangling.py
 
 ### <div align="center">Project Overview</div>
-In the Fall of 2019, a colleague and I launched the Monitoring of Beneficial Birds in Agricultural Ecosystems initiative. The purpose of this project is to connect sustainable land use practices with changes in native bird communities. We are particularly interested in species that provide ecosystem services or are of conservation concern. To date, we have completed two survey seasons (Fall 2019 and Spring 2020) at five organic farms in Ford County, Illinois. Our current goal is to secure an additional 5 years of funding ($10,000) to support seasonal surveys and an undergraduate researcher at the University of Illinois.
+In the Fall of 2019, a colleague and I launched the Monitoring of Beneficial Birds in Agricultural Ecosystems Initiative. The purpose of this project is to connect sustainable land use practices with changes in native bird communities. We are particularly interested in species that provide ecosystem services or are of conservation concern. To date, we have completed two survey seasons (Fall 2019 and Spring 2020) at five organic farms in Ford County, Illinois. Our current goal is to secure an additional 5 years of funding ($10,000) to support seasonal surveys and an undergraduate researcher at the University of Illinois.
 
 **Dallas Glazik - dglazik@gmail.com**<br />
 Outreach, communication, grants coordinator<br />
@@ -37,7 +37,7 @@ Surveyor, undergraduate researcher<br />
 Cow Creek (400 acres)<sup>1</sup><br />
 Craver Trust (200 acres)<br />
 J & W (160 acres)<br />
-R Wildflower & Fields (160 acres)
+R Wildflower & Fields (160 acres)<br />
 D & Q (80 acres)<br />
 
 ### <div align="center">Data Wrangling</div>
@@ -48,11 +48,13 @@ Avian count data is collected and entered as 4-letter "Alpha" codes. While these
 
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Bird_Codes_Table1.png "Alpha Codes to English Names Table")<br />
 
-**Figure 2.** The same sample after being transformed into a usable dictionary.<br />
+**Figure 2.** The same sample after being transformed into a usable dictionary in Python.<br />
 
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Bird_Codes_Table2.png "Alpha Codes to English Names Dictionary")<br />
 
 ### <div align="center">Data Cleaning</div>
+
+After establishing an "Alpha" codes reference dictionary, I began cleaning the Monitoring of Beneficial Birds in Agricultural Ecosystems Initiative dataset. This dataset was entered into excel by hand and contains thousands of entries.
 
 ### <div align="center">Tableau Visualizations</div>
 
