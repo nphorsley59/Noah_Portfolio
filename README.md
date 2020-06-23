@@ -42,7 +42,7 @@ D & Q (80 acres)<br />
 
 ### <div align="center">Data Wrangling</div>
 
-Avian count data is collected and entered as 4-letter "Alpha" codes. While these codes are meaningful to ornithologists, they do a poor job of communicating study results to the general public. I decided I'd need to present full species names when reporting data for this project. I used data wrangling techniques to turn a table published by The Institute for Bird Populations<sup>2</sup> into a Python dictionary. I then used this dictionary to connect the 4-letter "Alpha" codes in my dataset to the full English species names.<br />
+Avian count data is collected and entered as 4-letter "Alpha" codes. While these codes are meaningful to ornithologists, they do a poor job of communicating study results to the general public. I decided I'd need to present full species names when reporting data for this project. I used data wrangling techniques to turn a table published by The Institute for Bird Populations<sup>2</sup> (Figure 1) into a Python dictionary (Figure 2). I then used this dictionary to connect the 4-letter "Alpha" codes in my dataset to the full English species names.<br />
 
 **Figure 1.** A small sample of the over 2,100 bird species that have been assigned 4-letter "Alpha" codes.<br />
 
@@ -54,7 +54,22 @@ Avian count data is collected and entered as 4-letter "Alpha" codes. While these
 
 ### <div align="center">Data Cleaning</div>
 
-After establishing an "Alpha" codes reference dictionary, I began cleaning the Monitoring of Beneficial Birds in Agricultural Ecosystems Initiative dataset. This dataset was entered into excel by hand and contains thousands of entries.
+After establishing an "Alpha" codes reference dictionary, I began cleaning the Monitoring of Beneficial Birds in Agricultural Ecosystems Initiative dataset. I find data cleaning to be most effecient and thorough when divided into phases. For this project, I used the following approach:
+
+#### Phase 1 - IDENTIFICATION
+The first phase was to identify general problems with the dataset. I used .dtypes and a .value_counts() loop to create a fast summary of each column. I then used this summary to list out obvious tasks (Figure 3). While this was a good start, I had not addressed the possibility of NaNs in the dataset. To view NaNs, I used .isna().sum().sort_values(ascending=False) to view NaNs by column (Figure 4). Again, I listed out any obvious cleaning tasks.
+
+**Figure 3.** <br />
+
+![alt text]()<br />
+
+**Figure 4.** <br />
+
+![alt text]()<br />
+
+#### Phase 2
+
+#### Phase 3
 
 ### <div align="center">Tableau Visualizations</div>
 
