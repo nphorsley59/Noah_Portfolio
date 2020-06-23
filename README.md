@@ -65,7 +65,7 @@ The first phase was to identify general problems with the dataset. I used .dtype
 
 **Figure 4.** A table showing the number of NaNs in each column.<br /> 
 
-![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Data_Cleaning_Table2.png "Table of NaNs by Column")<br />
+![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Data_Cleaning_Table2.1.png "Table of NaNs by Column")<br />
 
 #### Phase 2 - Cleaning
 The second phase was to complete tasks identified in Phase 1. I used common indexing functions, such as .loc/iloc and .at/iat, to identify and address typos and other minor errors. More widespread problems were addressed using more aggressive functions and techniques, such as .replace(), .fillna(), lambda functions, loops, and custom functions (Figure 5).
@@ -77,9 +77,9 @@ The second phase was to complete tasks identified in Phase 1. I used common inde
 #### Phase 3 - Quality Assurance
 The third phase was to repeat Phase 1 and, if necessary, Phase 2 to ensure nothing was missed in the initial cleaning process. In this particular project, I was unable to link English species names to the "Alpha" codes in my dataset until some obvious errors had been fixed i.e. until after Phases 1 and 2. However, after linking the English species names to the "Alpha" codes, it quickly became clear that errors existed in the "Alpha" codes column (Figure 6). These errors were difficult to catch in Phases 1 and 2 because they existed in a diverse categorical variable with no 'reference' set available for verification. I find this second round of cleaning, which I call "Quality Assurance", to be most useful in large or error-prone datasets.
 
-**Figure 6.** TEXT<br />
+**Figure 6.** A table showing rows with "Alpha" code (SpeciesCode column) errors.<br />
 
-![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Data_Cleaning_Table4.png "TEXT")<br />
+![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Data_Cleaning_Table4.png "Alpha Code Errors")<br />
 
 #### Phase 4 - Usability
 The final phase was to 
