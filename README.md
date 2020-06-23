@@ -86,7 +86,7 @@ The final phase was to increase the usability and readability of the dataset. A 
 
 **Figure 7.** A sample of the cleaned Monitoring of Beneficial Birds in Agricultural Ecosystems Initiative dataset.<br />
 
-![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Data_Cleaning_Table5.png "Cleaned Dataset")<br />
+![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Data_Cleaning_Table5.1.png "Cleaned Dataset")<br />
 
 ### <div align="center">Exploratory Data Analysis Using Tableau</div>
 
