@@ -45,9 +45,11 @@ D & Q (80 acres)<br />
 Avian count data is collected and entered as 4-letter "Alpha" codes. While these codes are meaningful to ornithologists, they do a poor job of communicating study results to the general public. I decided I'd need to present full species names when reporting data for this project. I used data wrangling techniques to turn a table published by The Institute for Bird Populations<sup>2</sup> into a Python dictionary. I then used this dictionary to connect the 4-letter "Alpha" codes in my dataset to the full English species names.<br />
 
 **Figure 1.** A small sample of the over 2,100 bird species that have been assigned 4-letter "Alpha" codes.<br />
+
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Bird_Codes_Table1.png "Alpha Codes to English Names Table")<br />
 
 **Figure 2.** The same sample after being transformed into a usable dictionary.<br />
+
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Bird_Codes_Table2.png "Alpha Codes to English Names Dictionary")<br />
 
 ### <div align="center">Data Cleaning</div>
