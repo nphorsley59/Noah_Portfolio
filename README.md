@@ -24,21 +24,7 @@ Libraries and Programs: *Python, Spyder, Tableau, pandas, numpy*<br />
 Filename(s): AAD_DataCleaning.py, AAD_SpeciesCodes.py
 
 ### <div align="center">Project Overview</div>
-In the Fall of 2019, a colleague and I launched the Monitoring of Beneficial Birds in Agricultural Ecosystems Initiative. The purpose of this project is to connect sustainable land use practices with changes in native bird communities. We are particularly interested in species that provide ecosystem services or are of conservation concern. To date, we have completed two survey seasons (Fall 2019 and Spring 2020) at five organic farms in Ford County, Illinois. Our current goal is to secure an additional 5 years of funding ($10,000) to support seasonal surveys and an undergraduate researcher at the University of Illinois.
-
-**Dallas Glazik - dglazik@gmail.com**<br />
-Outreach, communication, grants coordinator<br />
-**Noah Horsley - nphorsley59@gmail.com**<br />
-Surveyor, analyst, project coordinator<br />
-**Colin Dobson - cdobson2@illinois.edu**<br />
-Surveyor, undergraduate researcher<br />
-
-**Enrolled Farms**<br />
-Cow Creek (400 acres)<sup>1</sup><br />
-Craver Trust (200 acres)<br />
-J & W (160 acres)<br />
-R Wildflower Farm & Fields (160 acres)<br />
-D & Q (80 acres)<br />
+In 2019, a colleague and I launched the Monitoring of Beneficial Birds in Agricultural Ecosystems Initiative. The purpose of this project is to connect sustainable land use practices with changes in native bird communities. As the sole analyst, I am responsible for transforming field data into a format that can be quickly and easily communicated with landowners and funding agencies. For the Spring 2020 dataset, I used data wrangling, cleaning, and visualization to quickly and efficiently create an interactive report.
 
 ### <div align="center">Data Wrangling</div>
 
