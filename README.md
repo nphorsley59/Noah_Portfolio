@@ -24,7 +24,7 @@ Libraries and Programs: *Python, Spyder, Tableau, pandas, numpy*<br />
 Filename(s): AAD_DataCleaning.py, AAD_SpeciesCodes.py
 
 ### <div align="center">Project Overview</div>
-In 2019, a colleague and I launched the Monitoring of Beneficial Birds in Agricultural Ecosystems Initiative. The purpose of this project is to connect sustainable land use practices with changes in native bird communities. As the sole analyst, I am responsible for transforming field data into a format that can be quickly and easily communicated with landowners and funding agencies. For the Spring 2020 dataset, I used data wrangling, cleaning, and visualization to quickly and efficiently create an interactive report.
+In 2019, a colleague and I launched the Monitoring of Beneficial Birds in Agricultural Ecosystems Initiative. The purpose of this project is to connect sustainable land use practices with changes in native bird communities. As the sole analyst, I am responsible for transforming raw data into a format that can be quickly and easily communicated with landowners and funding agencies. For the Spring 2020 dataset, I used standard data wrangling, data cleaning, and data visualization techniques to create an interactive report.
 
 ### <div align="center">Data Wrangling</div>
 
