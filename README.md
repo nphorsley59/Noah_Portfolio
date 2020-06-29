@@ -28,7 +28,7 @@ In 2019, a colleague and I launched the Monitoring of Beneficial Birds in Agricu
 
 ### <div align="center">Data Wrangling</div>
 
-Avian count data is collected and entered as 4-letter "Alpha" codes. While these codes are meaningful to ornithologists, they do a poor job of communicating study results to the general public. I decided I'd need to present full species names when reporting data for this project. I used data wrangling techniques to turn a table published by The Institute for Bird Populations<sup>2</sup> (Figure 1) into a Python dictionary (Figure 2). I then used this dictionary to connect the 4-letter "Alpha" codes in my dataset to the full English species names.<br />
+Avian count data is collected and entered as 4-letter "Alpha" codes. While these codes are meaningful to ornithologists, they do a poor job of communicating study results to the general public. I decided I'd need to present full species names when reporting data for this project. I used Python to turn this table (Figure 1) published by The Institute for Bird Populations<sup>2</sup> into a Python dictionary (Figure 2). I then used the dictionary to connect 4-letter "Alpha" codes in my dataset to the full English species names.<br />
 
 **Figure 1.** A small sample of the over 2,100 bird species that have been assigned 4-letter "Alpha" codes.<br />
 
