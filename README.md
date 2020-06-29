@@ -84,7 +84,7 @@ The third phase was to repeat Phase 1 and, if necessary, Phase 2 to ensure nothi
 #### Phase 4 - Usability
 The final phase was to increase the usability and readability of the dataset. A "clean" dataset that is difficult to understand/interpret is not very useful for analysis. For this dataset, I cleaned up uneccesary codes, renamed some columns, reordered the columns, and transformed some discrete data (e.g. StartTime) into continuous data. The final product was a clean, organized, easy-to-read dataset that was ready for analysis (Figure 7).
 
-**Figure 7.** A sample of the cleaned Monitoring of Beneficial Birds in Agricultural Ecosystems Initiative dataset.<br />
+**Figure 7.** A cleaned sample from the Spring 2020 dataset.<br />
 
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Data_Cleaning_Table5.1.png "Cleaned Dataset")<br />
 
