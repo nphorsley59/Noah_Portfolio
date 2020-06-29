@@ -90,7 +90,7 @@ The final phase was to increase the usability and readability of the dataset. A 
 
 ### <div align="center">Visualization Using Tableau</div>
 
-I used Tableau to summarize the results of our Spring 2020 surveys. I have included a sample plot below (Figure 8). The full workbook can be found on Tableau Public<sup>3</sup>.<br />
+I used Tableau to summarize the results of our Spring 2020 surveys. I have included a sample plot below (Figure 8). The full workbook<sup>3</sup> can be found on Tableau Public.<br />
 
 **Figure 8.** A bar chart showing prominent members of the bird community (>10 individuals) at each site.
 
