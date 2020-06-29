@@ -37,7 +37,7 @@ Surveyor, undergraduate researcher<br />
 Cow Creek (400 acres)<sup>1</sup><br />
 Craver Trust (200 acres)<br />
 J & W (160 acres)<br />
-R Wildflower & Fields (160 acres)<br />
+R Wildflower Farm & Fields (160 acres)<br />
 D & Q (80 acres)<br />
 
 ### <div align="center">Data Wrangling</div>
