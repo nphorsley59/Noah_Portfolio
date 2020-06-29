@@ -54,7 +54,7 @@ The first phase was to identify general problems with the dataset. I used .dtype
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Data_Cleaning_Table2.1.png "Table of NaNs by Column")<br />
 
 #### Phase 2 - Cleaning
-The second phase was to complete tasks identified in Phase 1. I used common indexing functions, such as .loc/iloc and .at/iat, to identify and address typos and other minor errors. More widespread problems were addressed using more aggressive functions and techniques, such as .replace(), .fillna(), lambda functions, loops, and custom functions (Figure 5).
+The second phase was to complete tasks identified in Phase 1. I used common indexing functions, such as .loc/iloc and .at/iat, to identify and address typos and other minor errors. More widespread problems were addressed using more powerful functions and techniques, such as .replace(), .fillna(), lambda functions, loops, and custom functions (Figure 5).
 
 **Figure 5.** A loop used to move data that had been entered into the wrong column.<br />
 
@@ -76,7 +76,7 @@ The final phase was to increase the usability and readability of the dataset. A 
 
 ### <div align="center">Visualization Using Tableau</div>
 
-I used Tableau to summarize the results of our Spring 2020 surveys. I have included a sample plot below (Figure 8). The full workbook<sup>3</sup> can be found on Tableau Public.<br />
+I used Tableau to visualize the results of our Spring 2020 surveys. I have included a sample plot below (Figure 8). The full workbook<sup>3</sup> can be found on Tableau Public.<br />
 
 **Figure 8.** A bar chart showing prominent members of the bird community (>10 individuals) at each site.
 
