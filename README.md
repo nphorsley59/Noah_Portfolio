@@ -88,13 +88,18 @@ The final phase was to increase the usability and readability of the dataset. A 
 
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Data_Cleaning_Table5.1.png "Cleaned Dataset")<br />
 
-### <div align="center">Exploratory Data Analysis Using Tableau</div>
+### <div align="center">Visualization Using Tableau</div>
 
-To showcase my proficiency with Tableau, I conducted an exploratory data analysis (EDA) using the software. For a more statistically rigorous EDA, please refer back to my project predicting House Sale Price in Des Moines, Iowa.
+I used Tableau to summarize the results of our Spring 2020 surveys. I have included a sample plot below (Figure 8). The full workbook can be found on Tableau Public<sup>3</sup>.<br />
+
+**Figure 8.** A bar chart showing prominent members of the bird community (>10 individuals) at each site.
+
+![alt text](link "text")
 
 ### <div align="center">Resources</div>
 <sup>1</sup> https://www.cowcreekorganics.com/about<br />
 <sup>2</sup> https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf<br />
+<sup>3</sup> https://public.tableau.com/profile/noah.horsley#!/vizhome/ILOrganicFarmSurveysSP2020/RWildflowerFarmandFieldsLLC_1<br />
 
 
 <br>
