@@ -94,7 +94,7 @@ I used Tableau to summarize the results of our Spring 2020 surveys. I have inclu
 
 **Figure 8.** A bar chart showing prominent members of the bird community (>10 individuals) at each site.
 
-![alt text](link "text")
+![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/BirdCbS_Sp2020_Table1.png "Bird Community by Site")<br />
 
 ### <div align="center">Resources</div>
 <sup>1</sup> https://www.cowcreekorganics.com/about<br />
