@@ -48,7 +48,7 @@ Avian count data is collected and entered as 4-letter "Alpha" codes. While these
 
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Bird_Species_Codes_Table1.png "Alpha Codes to English Names Table")<br />
 
-**Figure 2.** The same sample after being transformed into a usable dictionary in Python.<br />
+**Figure 2.** The same sample after being transformed into a Python dictionary.<br />
 
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Bird_Species_Codes_Table2.png "Alpha Codes to English Names Dictionary")<br />
 
@@ -59,25 +59,25 @@ After establishing an "Alpha" codes reference dictionary, I began cleaning the M
 #### Phase 1 - Identification
 The first phase was to identify general problems with the dataset. I used .dtypes and a .value_counts() loop to create a fast summary of each column. I then used this summary to list out obvious tasks (Figure 3). While this was a good start, I had not addressed the possibility of NaNs in the dataset. To view NaNs, I used .isna().sum().sort_values(ascending=False) to view NaNs by column (Figure 4). Again, I listed out any obvious cleaning tasks.
 
-**Figure 3.** Commenting a list of cleaning tasks revealed by each data summary.<br /> 
+**Figure 3.** An organized approach to cleaning data.<br /> 
 
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Data_Cleaning_Table1.png "Data Cleaning Tasks")<br />
 
-**Figure 4.** A table showing the number of NaNs in each column.<br /> 
+**Figure 4.** A simple method for summarizing NaNs in a dataset.<br /> 
 
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Data_Cleaning_Table2.1.png "Table of NaNs by Column")<br />
 
 #### Phase 2 - Cleaning
 The second phase was to complete tasks identified in Phase 1. I used common indexing functions, such as .loc/iloc and .at/iat, to identify and address typos and other minor errors. More widespread problems were addressed using more aggressive functions and techniques, such as .replace(), .fillna(), lambda functions, loops, and custom functions (Figure 5).
 
-**Figure 5.** An example of a loop used to move data that had been entered into the wrong column.<br />
+**Figure 5.** A loop used to move data that had been entered into the wrong column.<br />
 
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Data_Cleaning_Table3.png "Moving Data with a Loop")<br />
 
 #### Phase 3 - Quality Assurance
 The third phase was to repeat Phase 1 and, if necessary, Phase 2 to ensure nothing was missed in the initial cleaning process. In this particular project, I was unable to link English species names to the "Alpha" codes in my dataset until some obvious errors had been fixed i.e. until after Phases 1 and 2. However, after linking the English species names to the "Alpha" codes, it quickly became clear that errors existed in the "Alpha" codes column (Figure 6). These errors were difficult to catch in Phases 1 and 2 because they existed in a diverse categorical variable with no 'reference' set available for verification. I find this second round of cleaning, which I call "Quality Assurance", to be most useful in large or error-prone datasets.
 
-**Figure 6.** A table showing rows with "Alpha" code (SpeciesCode column) errors.<br />
+**Figure 6.** Identifying rows with "Alpha" code (SpeciesCode column) errors.<br />
 
 ![alt text](https://github.com/nphorsley59/Portfolio/blob/master/AAD_Figures/Data_Cleaning_Table4.png "Alpha Code Errors")<br />
 
