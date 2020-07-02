@@ -2,7 +2,7 @@
 
 <br>
 
-## 1. House Sale Price Model
+## 1. House Prices: Advanced Regression Techniques
 Skills Demonstrated: *multi-variate analysis, regression, multi-collinearity testing, exploratory data analysis*<br />
 Libraries and Programs: *pandas, matplotlib, seaborn*
 
@@ -18,7 +18,7 @@ https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview
 
 <br>
 
-## 2. Avian Abundance and Diversity Project
+## 2. Avian Monitoring: Cleaning and Visualization
 Skills Demonstrated: *data sourcing, data wrangling, data cleaning, lambda functions, exploratory data analysis*<br />
 Libraries and Programs: *Python, Spyder, Tableau, pandas, numpy*<br />
 Filename(s): AAD_DataCleaning.py, AAD_SpeciesCodes.py
@@ -90,7 +90,7 @@ I used Tableau to visualize the results of our Spring 2020 surveys. I have inclu
 
 <br>
 
-## 3. Partial Life-cycle Matrix Model
+## 3. Population Trends: Predictive Modeling
 Skills Demonstrated: *data simulation, predictive modeling, custom functions, feature engineering*<br />
 Libraries and Programs: *Python, Jupyter Notebook, pandas, numpy, matplotlib, math, copy*<br />
 Filename(s): PLC_MatrixModel.ipynb
