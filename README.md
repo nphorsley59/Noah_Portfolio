@@ -18,7 +18,7 @@ https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview
 
 <br>
 
-## 2. Avian Monitoring: Cleaning and Visualization
+## 2. Avian Monitoring: Data Preparation and Visualization
 Skills Demonstrated: *data sourcing, data wrangling, data cleaning, lambda functions, exploratory data analysis*<br />
 Libraries and Programs: *Python, Spyder, Tableau, pandas, numpy*<br />
 Filename(s): AAD_DataCleaning.py, AAD_SpeciesCodes.py
