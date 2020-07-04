@@ -85,7 +85,7 @@ I used Tableau to visualize the results of our Spring 2020 surveys. I have inclu
 ### <div align="center">Resources</div>
 <sup>1</sup> https://www.cowcreekorganics.com/about<br />
 <sup>2</sup> https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf<br />
-<sup>3</sup> https://public.tableau.com/profile/noah.horsley#!/vizhome/ILOrganicFarmSurveysSP2020/RWildflowerFarmandFieldsLLC_1<br />
+<sup>3</sup> https://public.tableau.com/profile/noah.horsley#!/<br />
 
 
 <br>
