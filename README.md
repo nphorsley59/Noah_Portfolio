@@ -4,7 +4,7 @@
 
 ## 1. Sale Price: Advanced Regression Techniques
 Skills Demonstrated: *multi-variate analysis, regression, multi-collinearity testing, exploratory data analysis*<br />
-Libraries and Programs: *pandas, matplotlib, seaborn*
+Libraries and Programs: *Python, Jupyter Notebook, matplotlib, numpy, pandas, seaborn*
 
 ### Project Overview
 Using a competition dataset from Kaggle with over 75 explanatory variables, I created a model that predicts the sale price of a house in Ames, Iowa based on its description. The purpose of this project was to demonstrate my ability to use an exploratory data analysis on a large, complicated dataset to produce a reliable predictive model.
@@ -20,7 +20,7 @@ https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview
 
 ## 2. Avian Monitoring: Data Preparation and Visualization
 Skills Demonstrated: *data sourcing, data wrangling, data cleaning, lambda functions, exploratory data analysis*<br />
-Libraries and Programs: *Python, Spyder, Tableau, pandas, numpy*<br />
+Libraries and Programs: *Python, Spyder, Tableau, numpy, pandas*<br />
 Filename(s): AAD_DataCleaning.py, AAD_SpeciesCodes.py
 
 ### <div align="center">Project Overview</div>
@@ -92,7 +92,7 @@ I used Tableau to visualize the results of our Spring 2020 surveys. I have inclu
 
 ## 3. Population Trends: Predictive Modeling
 Skills Demonstrated: *data simulation, predictive modeling, custom functions, feature engineering*<br />
-Libraries and Programs: *Python, Jupyter Notebook, pandas, numpy, matplotlib, math, copy*<br />
+Libraries and Programs: *Python, Jupyter Notebook, math, matplotlib, numpy, pandas*<br />
 Filename(s): PLC_MatrixModel.ipynb
 
 ### <div align="center">Project Overview</div>
