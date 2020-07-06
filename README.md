@@ -2,7 +2,7 @@
 
 <br>
 
-## 1. House Prices: Advanced Regression Techniques
+## 1. Sale Price: Advanced Regression Techniques
 Skills Demonstrated: *multi-variate analysis, regression, multi-collinearity testing, exploratory data analysis*<br />
 Libraries and Programs: *pandas, matplotlib, seaborn*
 
