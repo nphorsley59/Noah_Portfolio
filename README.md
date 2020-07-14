@@ -22,7 +22,7 @@ https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview
 
 <br>
 
-## 2. Monitoring Avian Communities: Data Preparation and Visualization
+## 2. Monitoring Avian Diversity
 Skills Demonstrated: *data sourcing, data wrangling, data cleaning, lambda functions, exploratory data analysis*<br />
 Libraries and Programs: *Python, Spyder, Tableau, numpy, pandas*<br />
 Filename(s): AAD_DataCleaning.py, AAD_SpeciesCodes.py
@@ -94,7 +94,7 @@ I used Tableau to visualize the results of our Spring 2020 surveys. I have inclu
 
 <br>
 
-## 3. Population Trends: Predictive Modeling
+## 3. Modeling Population Growth
 Skills Demonstrated: *data simulation, predictive modeling, custom functions, feature engineering*<br />
 Libraries and Programs: *Python, Jupyter Notebook, math, matplotlib, numpy, pandas*<br />
 Filename(s): PLC_MatrixModel.ipynb
