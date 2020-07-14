@@ -23,7 +23,7 @@ https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview
 <br>
 
 ## 2. Monitoring Avian Diversity
-Skills Demonstrated: *data sourcing, data wrangling, data cleaning, lambda functions, exploratory data analysis*<br />
+Skills Demonstrated: *data sourcing, data wrangling, data cleaning, lambda functions, data visualization*<br />
 Libraries and Programs: *Python, Spyder, Tableau, numpy, pandas*<br />
 Filename(s): AAD_DataCleaning.py, AAD_SpeciesCodes.py
 
