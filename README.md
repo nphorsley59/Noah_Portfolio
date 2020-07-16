@@ -2,7 +2,7 @@
 
 <br>
 
-## 1. Sale Price: Advanced Regression Techniques
+## 1. Predicting Sale Price
 Skills Demonstrated: *multi-variate analysis, regression, multi-collinearity testing, exploratory data analysis*<br />
 Libraries and Programs: *Python, Jupyter Notebook, matplotlib, numpy, pandas, seaborn*
 
