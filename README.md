@@ -4,7 +4,7 @@
 
 ## 1. Predicting House Sale Price
 
-Skills Demonstrated: *multi-variate analysis, machine learning, linear regression, data transformation, exploratory data analysis*<br/>
+Skills Demonstrated: *machine learning, linear regression, data transformation, exploratory data analysis*<br/>
 Libraries and Programs: *Python, Jupyter Notebook, matplotlib, numpy, pandas, scipy, seaborn, sklearn*<br/>
 
 ### <div align="center">Project Overview</div>
