@@ -120,7 +120,7 @@ Libraries and Programs: *Python, Jupyter Notebook, math, matplotlib, numpy, pand
 Filename(s): PLC_MatrixModel.ipynb
 
 ### <div align="center">Project Overview</div>
-As part of my Master's thesis, I built a partial life-cycle matrix model<sup>1</sup> and used it to predict the survival rate of Common Grackles<sup>2</sup> during the non-breeding season. The model simulates realistic population growth and has several additional features that extend beyond the scope of my research. I am in the process of publishing the results produced by this model. I am also using this model to do predictive modeling for another publication investigating Micronesian Starling demography on the island of Guam.
+As part of my Master's thesis, I built a partial life-cycle matrix model<sup>1</sup> and used it to predict the survival rate of Common Grackles<sup>2</sup> during the non-breeding season. The model simulates realistic population growth and has several additional features that extend beyond the scope of my research. I am in the process of publishing the results produced by this model. I am also using this model to do predictive modeling for another publication investigating Micronesian Starling demography on the island of Guam. For a more in-depth look at this analysis, please refer to my [Jupyter Notebook](https://github.com/nphorsley59/Population_Growth_Modeling/blob/master/PLC_MatrixModel.ipynb).
 
 ### <div align="center">Model Structure</div>
 
@@ -183,7 +183,7 @@ Libraries and Programs: *Python, Spyder, Tableau, numpy, pandas*<br />
 Filename(s): AAD_DataCleaning.py, AAD_SpeciesCodes.py
 
 ### <div align="center">Project Overview</div>
-In 2019, a colleague and I launched the Monitoring of Beneficial Birds in Agricultural Ecosystems Initiative. The purpose of this project is to connect sustainable land use practices with changes in native bird communities. As the sole analyst, I am responsible for transforming raw data into a format that can be quickly and easily communicated with landowners and funding agencies. For the Spring 2020 dataset, I used standard data wrangling, data cleaning, and data visualization techniques to create an interactive report.
+In 2019, a colleague and I launched the Monitoring of Beneficial Birds in Agricultural Ecosystems Initiative. The purpose of this project is to connect sustainable land use practices with changes in native bird communities. As the sole analyst, I am responsible for transforming raw data into a format that can be quickly and easily communicated with landowners and funding agencies. For the Spring 2020 dataset, I used standard data wrangling, data cleaning, and data visualization techniques to create an interactive report. For a more in-depth look at this analysis, please refer to my Python scripts ([Create Dict](https://github.com/nphorsley59/Monitoring_Avian_Diversity/blob/master/Create_Dict.py), [Data Cleaning](https://github.com/nphorsley59/Monitoring_Avian_Diversity/blob/master/Data_Cleaning.py)).
 
 ### <div align="center">Data Wrangling</div>
 
