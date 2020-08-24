@@ -2,6 +2,12 @@
 
 <br>
 
+## Table of Contents
+* 1. [Predicting Sale Price](https://github.com/nphorsley59/PORTFOLIO#1-predicting-house-sale-price)
+* 2. [Modeling Population Growth]
+* 3. [MNIST Digit Recognition]
+* 4. [Monitoring Avian Diversity]
+
 ## 1. Predicting House Sale Price
 
 Skills Demonstrated: *machine learning, linear regression, data transformation, exploratory data analysis*<br/>
