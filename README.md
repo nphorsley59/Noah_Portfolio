@@ -3,10 +3,10 @@
 <br>
 
 ## Table of Contents
-* 1. [Predicting Sale Price](https://github.com/nphorsley59/PORTFOLIO#1-predicting-house-sale-price)
-* 2. [Modeling Population Growth]
-* 3. [MNIST Digit Recognition]
-* 4. [Monitoring Avian Diversity]
+* [Predicting Sale Price](https://github.com/nphorsley59/PORTFOLIO#1-predicting-house-sale-price)
+* [Modeling Population Growth](https://github.com/nphorsley59/PORTFOLIO#2-modeling-population-growth)
+* [MNIST Digit Recognition](https://github.com/nphorsley59/PORTFOLIO#3-mnist-digit-recognition)
+* [Monitoring Avian Diversity](https://github.com/nphorsley59/PORTFOLIO#4-monitoring-avian-diversity)
 
 ## 1. Predicting House Sale Price
 
