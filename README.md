@@ -7,6 +7,7 @@
 * [Modeling Population Growth](https://github.com/nphorsley59/PORTFOLIO#2-modeling-population-growth)
 * [MNIST Digit Recognition](https://github.com/nphorsley59/PORTFOLIO#3-mnist-digit-recognition)
 * [Monitoring Avian Diversity](https://github.com/nphorsley59/PORTFOLIO#4-monitoring-avian-diversity)
+<br/>
 
 ## 1. Predicting House Sale Price
 
@@ -250,7 +251,7 @@ Data augmentation increases the effective sample size of a dataset without actua
 <sup>1</sup> https://www.kaggle.com/c/digit-recognizer<br/>
 <sup>2</sup> https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/
 
-</br>
+<br>
 
 ## 4. Monitoring Avian Diversity
 Skills Demonstrated: *data sourcing, data wrangling, data cleaning, lambda functions, data visualization*<br />
