@@ -1,9 +1,9 @@
 # <div align="center">Noah's Data Science Portfolio</div>
 
 ## Table of Contents
-* [Predicting Sale Price](https://github.com/nphorsley59/PORTFOLIO#1-predicting-house-sale-price)
-* [Modeling Population Growth](https://github.com/nphorsley59/PORTFOLIO#2-modeling-population-growth)
-* [MNIST Digit Recognition](https://github.com/nphorsley59/PORTFOLIO#3-mnist-digit-recognition)
+* [Predicting Sale Price - Regression](https://github.com/nphorsley59/PORTFOLIO#1-predicting-house-sale-price)
+* [Modeling Population Growth - Simulation](https://github.com/nphorsley59/PORTFOLIO#2-modeling-population-growth)
+* [MNIST Digit Recognition - Clustering](https://github.com/nphorsley59/PORTFOLIO#3-mnist-digit-recognition) 
 * [Monitoring Avian Diversity](https://github.com/nphorsley59/PORTFOLIO#4-monitoring-avian-diversity)
 
 <br/>
