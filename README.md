@@ -1,6 +1,7 @@
 # <div align="center">Noah's Data Science Portfolio</div>
 
 ## Table of Contents
+* [Predicting Passenger Survival - Classification]()
 * [Predicting Sale Price - Regression](https://github.com/nphorsley59/PORTFOLIO#1-predicting-house-sale-price)
 * [Modeling Population Growth - Simulation](https://github.com/nphorsley59/PORTFOLIO#2-modeling-population-growth)
 * [MNIST Digit Recognition - Clustering](https://github.com/nphorsley59/PORTFOLIO#3-mnist-digit-recognition) 
@@ -8,7 +9,166 @@
 
 <br/>
 
-## 1. Predicting House Sale Price
+## 1. Predicting Passenger Survival
+
+Skills Demonstrated: *classification, ensemble learning, hyperparameter tuning, EDA, feature engineering*<br/>
+Libraries and Programs: *Python, Jupyter Notebook, pandas, pivot_table, matplotlib, numpy, regex, sklearn, seaborn*<br/>
+
+### <div align="center">Project Overview</div>
+Using the Titanic competition dataset available on Kaggle<sup>1</sup>, I created a model to predict which passengers would survive the 1912 sinking of the Titanic. The dataset included passenger attributes such as Name, Age, Sex, and Class, as well as information about their trip, such as their Cabin, Embarkment Location, and Ticket Price.<br>
+
+### <div align="center">Exploratory Data Analysis</div>
+#### 1. Explore Data Structure
+I began by learning some basics about the dataset (Figure 1). I wanted to know its shape (shape()), its column names (columns()), and its contents (sample(), describe(), info()).<br>
+
+**Figure 1.** A sample of ten rows from the training set.<br>
+
+![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/data_sample.png "Data Sample")<br>
+
+Next, I inspected the distribution of each feature<sup>3</sup>. For numerical features, I calculated location (mean(), trimmed_mean(), median()) and variation (std(), mad()). For categorical features, I inspected distribution using counts and proportions (value_counts()).<br>
+
+**Figure 2.** A kernel density estimation of the distribution of passenger fare and a pie chart of the distribution of passenger class.<br>
+
+![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/dist_classandfare.jpg "Feature Distributions")<br>
+
+#### 2. Clean and Organize
+I identified several issues while exploring the dataset. I prefer to clean these up before exploring relationships between variables.<br>
+
+For this dataset, I needed to:<br>
+- Address NaNs<br>
+- Split 'Cabin' into deck and room number<br>
+- Split 'Name' into title and last name<br>
+- Use 'Ticket', 'ParCh', and 'SibSp' to determine if passengers were traveling alone or in a group<br>
+- Apply log(x+1) transformation to 'Fare' to fix right-skew<br>
+- Streamline (drop/rename columns, change dtypes, etc)<br>
+
+##### 2.1. Complete Columns with NaNs
+I mapped NaNs and completed columns that had relatively straight-forward solutions. I assigned a placeholder value for NaNs in 'Cabin' and 'Age' until I could address them properly.<br>
+
+**Figure 3.** Tables showing NaNs by feature for the 'train' and 'test' datasets.<br>
+
+![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/null_tables.png "NULL value Tables")<br>
+
+##### 2.2. Split 'Cabin'
+**Figure 4.** I used the string matching libarary, re, to parse deck and cabin number from 'Cabin'.<br>
+
+![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/cabin_split.png "Splitting 'Cabin'")<br>
+
+##### 2.3. Split 'Name'
+**Figure 5.** I parsed 'Title' and 'Last' from 'Name' and reduced low frequency 'Title' results ("Col", "Jonkheer", "Rev") to "Other".<br>
+
+![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/name_split.png "Splitting 'Name'")<br>
+
+##### 2.4. Engineer 'GroupSize' and 'FamilySize'
+**Figure 6.** I counted ticket replicates to itentify non-familial groups and added 'ParCh' to 'SibSp' to identify familial groups.<br>
+
+![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/partysize_split.png "Engineering 'Connections'")<br>
+
+#### 3. Examine Relationships
+I concluded by exploring how features were related to the target, 'Survived', and to each other. Before looking at individual features, I constructed a correlation matrix and visualized it as a heatmap.<br>
+
+**Figure 7.** Correlation coefficients for linear relationships between features.<br>
+
+![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/corr_heatmap2.png "Correlation Heatmap")<br>
+
+##### 3.1. Collinearity
+Several features were strongly correlated, introducing collinearity into the model. I explored them further to determine which were appropriate to keep, drop, or engineer for analysis.<br>
+
+**Figure 8.** A swarm plot of deck and cabin assignments as well as the fate of their occupants.<br>
+
+![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/cabin_deck2.png "Deck and Cabin Assignments")<br>
+
+A passenger's cabin assignment had little impact on their fate. Considering 'Cabin' and 'Deck' were unknown for ~80% of passengers in the dataset, I decided to drop these features from the analysis.<br>
+
+**Figure 9.** Survival rate based on various criteria describing a passengers connections on-board.<br>
+
+![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/partysize_plot.png "Party Info Plot")<br>
+
+I found that being alone or being in a group of more than four seemed to decrease a passenger's chance of surviving. I engineered a new feature, 'Connections', and binned it based on these findings (group size of 1, 2-4, and >4).
+
+##### 3.2. Complete 'Age'
+Passenger age was unknown for ~20% of the dataset. I grouped passengers with known age by 'Sex', 'Title', and 'Class' - features correlated with 'Age' - and calculated the median age for each combination. Then, to complete 'Age', I filled all passenger records of unknown age with the appropriate group median (matching 'Sex', 'Title' and 'Class'). I got this idea from a Kaggle notebook by Manav Sehgal<sup>4</sup>.
+
+**Figure 10.** The loop used to complete 'Age'.<br>
+
+![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/age_code.png "Completing 'Age'")<br>
+
+##### 3.3. Address 'Fare' Distribution
+While examining 'Fare' and how it related to other features, I noted two problems:<br>
+- A handful of passengers had a ticket fare of $0.00<br>
+- Passengers who shared tickets paid more than the average fare for their class<br>
+
+**Figure 11.** Fare was positively related to 'Connections', even when controlling for 'Class'.<br>
+
+![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/fare_connections_unadj.png "Influence of Connections on Fare")<br>
+
+From this, I concluded that the fare for shared tickets must be a lump sum rather than an individual fare. I addressed this by dividing 'Fare' by 'GroupSize'. I also concluded that passengers with a ticket fare of $0.00 were crew members. They were all middle-aged males and almost all of them died. I addressed this by assigning them a new 'Class'.<br>
+
+##### 3.4. Multivariate Relationships
+I looked at a lot of multivariate relationships and included two figures that I found particularly interesting/informative. The age and sex of a passenger were strong predictors of survival; however, on top of that, class was arguably even more important. Age and sex can be condensed into title to show the relationship with class. I found this complex web of influence very interesting.
+
+**Figure 12.** Violin plot showing how the age and sex of a passenger influenced their chance of survival.<br>
+
+![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/age_sex.png "Age, Sex, Survival")<br>
+
+**Figure 13.** The influence of title - a rough estimate of age and sex - and class on passenger survival.<br>
+
+![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/title_class.png "Title, Class, Survival")<br>
+
+I prepared the dataset for modeling by dropping uninformative columns, encoding all non-integer/non-float dtypes, splitting 'train' into a training and testing set for cross-validation, and scaling the data.<br>
+
+### <div align="center">Modeling</div>
+My goal was to build a model that could accurately predict the fate of a passenger on the Titanic. Considering the simplicity of the dataset and the unquantifiable forces at play in the real event, I set a goal of 80% model accuracy.<br>
+
+#### 1. Pre-processing
+I prepared the dataset for modeling by dropping uninformative columns, encoding all non-integer/non-float dtypes, splitting 'train' into a training and testing set for cross-validation, and scaling the data.<br>
+
+**Figure 14.** A sample from the streamlined 'train' set, pre-scaling.<br>
+
+![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/final_dataset.png "'Train' prepped for modeling")<br>
+
+**Figure 15.** The code used to split 'train' and scale the data for modeling.<br>
+
+![alt_text](https://github.com/nphorsley59/Passenger_Survival/blob/master/Figures/train_test_scale.png "Split and Scale")<br>
+
+#### 2. Classification
+I tested a range of classification algorithms, including Logistic Regression, Support Vector Machine, K-nearest Neighbors, and Decision Tree<sup>5</sup>. I used the training set to fit the model and the testing set to predict survival and score model accuracy (classification_report()). I also used GridSearchCV() to tune the hyperparameters for each model.<br>
+
+**Figure 16.** Code used to fit and score a Logistic Regression model.<br>
+
+![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/log_reg_code.png "Logistic Regression Code")<br>
+
+**Figure 17.** A grid search with cross-validation to determine the best hyperparameters for the K-nearest Neighbors model.<br>
+
+![alt_text](https://github.com/nphorsley59/Passenger_Survival/blob/master/Figures/grid_search.png "Tuning Hyperparameters")<br>
+
+#### 3. Ensemble Learning
+I used ensemble learning to construct models with the aggregate knowledge of many simpler models. Specifically, I used Random Forest (many Decision Trees) and a Voting Classifier (a mix of classification algorithms). I then scored and compared my models based on precision, recall, and accuracy.<br>
+
+**Figure 18.** The decision Boundary from Voting Classifier for 'Fare' and 'Age'. Only passengers that died are shown.<br>
+
+![alt_text](https://github.com/nphorsley59/Passenger_Survival/blob/master/Figures/decision_boundary_death.png "Decision Boundary")<br>
+
+**Figure 19.** A bar chart showing model accuracy; one aspect of model selection.<br>
+
+![alt_text](https://github.com/nphorsley59/Passenger_Survival/blob/master/Figures/model_selection.png "Model Selection")<br>
+
+#### 4. Final Predictions
+The most balanced, high-scoring model used a Voting Classifier to predict passenger survival to 83% accuracy. It was better at predicting death than survival and struggled the most with false negatives.<br>
+
+**Figure 20.** A normalized confusion matrix for the Voting Classifier model.<br>
+
+![alt_text](https://github.com/nphorsley59/Passenger_Survival/blob/master/Figures/conf_matrix.png "Confusion Matrix")
+
+### <div align="center">Resources</div>
+<sup>1</sup> https://www.kaggle.com/c/titanic <br/>
+<sup>2</sup> https://www.encyclopedia-titanica.org/cabins.html <br/>
+<sup>3</sup> https://www.oreilly.com/library/view/practical-statistics-for/9781492072935/ <br>
+<sup>4</sup> https://www.kaggle.com/startupsci <br>
+<sup>5</sup> https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/<br>
+
+
+## 2. Predicting House Sale Price
 
 Skills Demonstrated: *machine learning, linear regression, data transformation, exploratory data analysis*<br/>
 Libraries and Programs: *Python, Jupyter Notebook, matplotlib, numpy, pandas, scipy, seaborn, sklearn*<br/>
@@ -119,7 +279,7 @@ Now that I had several relatively accurate models, I used the model with the bes
 
 <br>
 
-## 2. Modeling Population Growth
+## 3. Modeling Population Growth
 Skills Demonstrated: *data simulation, predictive modeling, custom functions, feature engineering*<br />
 Libraries and Programs: *Python, Jupyter Notebook, math, matplotlib, numpy, pandas*<br />
 
@@ -181,7 +341,7 @@ The partial life-cycle matrix model I built for my Master's thesis was used to p
 
 <br>
 
-## 3. MNIST Digit Recognition</div>
+## 4. MNIST Digit Recognition
 ### <div align="center">Project Overview</div>
 Skills Demonstrated: *SVM, KNN, big data, model optimization, data augmentation*<br />
 Libraries and Programs: *Python, Jupyter Notebook, matplotlib, numpy, pandas, scikit-learn, scipy, statistics*<br />
@@ -249,73 +409,3 @@ Data augmentation increases the effective sample size of a dataset without actua
 ### <div align="center">Resources</div>
 <sup>1</sup> https://www.kaggle.com/c/digit-recognizer<br/>
 <sup>2</sup> https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/
-
-<br>
-
-## 4. Monitoring Avian Diversity
-Skills Demonstrated: *data sourcing, data wrangling, data cleaning, lambda functions, data visualization*<br />
-Libraries and Programs: *Python, Spyder, Tableau, numpy, pandas*<br />
-
-### <div align="center">Project Overview</div>
-In 2019, a colleague and I launched the Monitoring of Beneficial Birds in Agricultural Ecosystems Initiative. The purpose of this project is to connect sustainable land use practices with changes in native bird communities. As the sole analyst, I am responsible for transforming raw data into a format that can be quickly and easily communicated with landowners and funding agencies. For the Spring 2020 dataset, I used standard data wrangling, data cleaning, and data visualization techniques to create an interactive report. For a more in-depth look at this analysis, please refer to my Python scripts ([Create Dict](https://github.com/nphorsley59/Monitoring_Avian_Diversity/blob/master/Create_Dict.py), [Data Cleaning](https://github.com/nphorsley59/Monitoring_Avian_Diversity/blob/master/Data_Cleaning.py)).
-
-### <div align="center">Data Wrangling</div>
-
-Avian count data is collected and entered as 4-letter "Alpha" codes. While these codes are meaningful to ornithologists, they do a poor job of communicating study results to the general public. I decided I'd need to present full species names when reporting data for this project. I used Python to turn this table (Figure 1) published by The Institute for Bird Populations<sup>2</sup> into a Python dictionary (Figure 2). I then used the dictionary to connect 4-letter "Alpha" codes in my dataset to the full English species names.<br />
-
-**Figure 1.** A small sample of the over 2,100 bird species that have been assigned 4-letter "Alpha" codes.<br />
-
-![alt text](https://github.com/nphorsley59/Monitoring_Avian_Diversity/blob/master/Figures/Bird_Species_Codes_Table1.png "Alpha Codes to English Names Table")<br />
-
-**Figure 2.** The same sample after being transformed into a Python dictionary.<br />
-
-![alt text](https://github.com/nphorsley59/Monitoring_Avian_Diversity/blob/master/Figures/Bird_Species_Codes_Table2.png "Alpha Codes to English Names Dictionary")<br />
-
-### <div align="center">Data Cleaning</div>
-
-After establishing an "Alpha" codes reference dictionary, I began cleaning the Monitoring of Beneficial Birds in Agricultural Ecosystems Initiative dataset. I find data cleaning to be most effecient and thorough when divided into phases. For this project, I used the following approach:
-
-#### Phase 1 - Identification
-The first phase was to identify general problems with the dataset. I used .dtypes and a .value_counts() loop to create a fast summary of each column. I then used this summary to list out obvious tasks (Figure 3). While this was a good start, I had not addressed the possibility of NaNs in the dataset. To view NaNs, I used .isna().sum().sort_values(ascending=False) to view NaNs by column (Figure 4). Again, I listed out any obvious cleaning tasks.
-
-**Figure 3.** An organized approach to cleaning data.<br /> 
-
-![alt text](https://github.com/nphorsley59/Monitoring_Avian_Diversity/blob/master/Figures/Data_Cleaning_Table1.png "Data Cleaning Tasks")<br />
-
-**Figure 4.** A simple method for summarizing NaNs in a dataset.<br /> 
-
-![alt text](https://github.com/nphorsley59/Monitoring_Avian_Diversity/blob/master/Figures/Data_Cleaning_Table2.1.png "Table of NaNs by Column")<br />
-
-#### Phase 2 - Cleaning
-The second phase was to complete tasks identified in Phase 1. I used common indexing functions, such as .loc/iloc and .at/iat, to identify and address typos and other minor errors. More widespread problems were addressed using more powerful functions and techniques, such as .replace(), .fillna(), lambda functions, loops, and custom functions (Figure 5).
-
-**Figure 5.** A loop used to move data that had been entered into the wrong column.<br />
-
-![alt text](https://github.com/nphorsley59/Monitoring_Avian_Diversity/blob/master/Figures/Data_Cleaning_Table3.png "Moving Data with a Loop")<br />
-
-#### Phase 3 - Quality Assurance
-The third phase was to repeat Phase 1 and, if necessary, Phase 2 to ensure nothing was missed in the initial cleaning process. In this particular project, I was unable to link English species names to the "Alpha" codes in my dataset until some obvious errors had been fixed i.e. until after Phases 1 and 2. However, after linking the English species names to the "Alpha" codes, it quickly became clear that errors existed in the "Alpha" codes column (Figure 6). These errors were difficult to catch in Phases 1 and 2 because they existed in a diverse categorical variable with no 'reference' set available for verification. I find this second round of cleaning, which I call "Quality Assurance", to be most useful in large or error-prone datasets.
-
-**Figure 6.** Identifying rows with "Alpha" code (SpeciesCode column) errors.<br />
-
-![alt text](https://github.com/nphorsley59/Monitoring_Avian_Diversity/blob/master/Figures/Data_Cleaning_Table4.png "Alpha Code Errors")<br />
-
-#### Phase 4 - Usability
-The final phase was to increase the usability and readability of the dataset. A "clean" dataset that is difficult to understand/interpret is not very useful for analysis. For this dataset, I cleaned up uneccesary codes, renamed some columns, reordered the columns, and transformed some discrete data (e.g. StartTime) into continuous data. The final product was a clean, organized, easy-to-read dataset that was ready for analysis (Figure 7).
-
-**Figure 7.** A cleaned sample from the Spring 2020 dataset.<br />
-
-![alt text](https://github.com/nphorsley59/Monitoring_Avian_Diversity/blob/master/Figures/Data_Cleaning_Table5.1.png "Cleaned Dataset")<br />
-
-### <div align="center">Visualization Using Tableau</div>
-
-I used Tableau to visualize the results of our Spring 2020 surveys. I have included a sample plot below (Figure 8). The full workbook<sup>3</sup> can be found on Tableau Public.<br />
-
-**Figure 8.** A bar chart showing prominent members of the bird community (>10 individuals) at each site.
-
-![alt text](https://github.com/nphorsley59/Monitoring_Avian_Diversity/blob/master/Figures/BirdCbS_Sp2020_Table1.png "Bird Community by Site")<br />
-
-### <div align="center">Resources</div>
-<sup>1</sup> https://www.cowcreekorganics.com/about<br />
-<sup>2</sup> https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf<br />
-<sup>3</sup> https://public.tableau.com/profile/noah.horsley#!/<br />
