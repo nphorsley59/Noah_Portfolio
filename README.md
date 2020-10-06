@@ -167,6 +167,7 @@ The most balanced, high-scoring model used a Voting Classifier to predict passen
 <sup>4</sup> https://www.kaggle.com/startupsci <br>
 <sup>5</sup> https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/<br>
 
+<br>
 
 ## 2. Predicting House Sale Price
 
