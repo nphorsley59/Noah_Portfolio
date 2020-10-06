@@ -290,10 +290,10 @@ Now that I had several relatively accurate models, I used the model with the bes
 Skills Demonstrated: *data simulation, predictive modeling, custom functions, feature engineering*<br />
 Libraries and Programs: *Python, Jupyter Notebook, math, matplotlib, numpy, pandas*<br />
 
-### <div align="center">Project Overview</div>
+## <div align="center">Project Overview</div>
 As part of my Master's thesis, I built a partial life-cycle matrix model<sup>1</sup> and used it to predict the survival rate of Common Grackles<sup>2</sup> during the non-breeding season. The model simulates realistic population growth and has several additional features that extend beyond the scope of my research. I am in the process of publishing the results produced by this model. I am also using this model to do predictive modeling for another publication investigating Micronesian Starling demography on the island of Guam. For a more in-depth look at this analysis, please refer to my [Jupyter Notebook](https://github.com/nphorsley59/Population_Growth_Modeling/blob/master/PLC_MatrixModel.ipynb).
 
-### <div align="center">Model Structure</div>
+## <div align="center">Model Structure</div>
 
 ### Stage 1
 The first modeling stage simulates population growth over a pre-defined trial period to transform a single population variable into an array representing stable age distribution. 
@@ -307,7 +307,7 @@ The third and final modeling stage averages annual population size and growth ov
 ### Additional Features
 The three stages outlined above describe the most simplistic modeling approach. More details can be found in the PLC_MatrixModel_AddFeat.txt file included in my Portfolio repository.
 
-### <div align="center">Results</div>
+## <div align="center">Results</div>
 
 Matrix models use matrices to track population growth across age classes (Table 1). This model structure allowed me to input age-specific survival and fecundity for more accurate modeling results. 
 
@@ -339,31 +339,31 @@ For my thesis, we used established demographic rates from the literature and est
 **Figure 2.** A sample of simulations produced by the model, replicating projected decline in Illinois.<br />
 ![alt text](https://github.com/nphorsley59/Population_Growth_Modeling/blob/master/Figures/livesim_plot_24sims.gif "Simulation Animation")
 
-### <div align="center">Summary</div>
+## <div align="center">Summary</div>
 
 The partial life-cycle matrix model I built for my Master's thesis was used to project population decline in my study species, the Common Grackle, and to predict rates of non-breeding season survival for three distinct populations: a stable population, the current global population, and the current Illinois population. The modeling approach I chose allowed me to use many demographic parameters and account for realistic environmental variation. I learned a lot about model design, custom functions, and advanced visualization techniques from this project and am excited to reuse the model to answer other research questions in the future.
 
-### <div align="center">Resources</div>
+## <div align="center">Resources</div>
 <sup>1</sup> https://onlinelibrary.wiley.com/doi/abs/10.1034/j.1600-0706.2001.930303.x<br />
 <sup>2</sup> https://birdsoftheworld.org/bow/species/comgra/cur/introduction<br />
 
 <br>
 
 ## 4. MNIST Digit Recognition
-### <div align="center">Project Overview</div>
+## <div align="center">Project Overview</div>
 Skills Demonstrated: *SVM, KNN, big data, model optimization, computer vision, data augmentation*<br />
 Libraries and Programs: *Python, Jupyter Notebook, matplotlib, numpy, pandas, scikit-learn, scipy, statistics*<br />
 
 Computer vision is a common application of machine learning algorithms. I used the MNIST dataset<sup>1</sup> to demonstrate the application of clustering methods<sup>2</sup> (SVM and KNN) to computer vision. The primary objective of the project was to train a model to recognize digital, black-and-white images of hand-written digits (0-9). My top model correctly identified >97% of the images in the 'test' dataset. For a more in-depth look at this analysis, please refer to my [Jupyter Notebook](https://github.com/nphorsley59/Handwritten_Digits/blob/master/digit_recognition_classifier.ipynb).
 
-### <div align="center">Preparation</div>
+## <div align="center">Preparation</div>
 Preparing the MNIST dataset for analysis was relatively straight-forward. Even though I assumed it was a clean dataset, I ran some quick tests looking for NaNs and other potential typos/outliers to be safe. I also collected some basic information about the structure of the dataset and visualized the images the model would be working with (Figure 1). The full dataset contained 42,000 28x28 images of digits, ranging from 0-9.
 
 **Figure 1.** A sample of hand-written digits from the dataset.</br>
 
 ![alt_text](https://github.com/nphorsley59/MNIST_Digit_Recognition/blob/master/Figures/60_digits.png "Sample Digit")
 
-### <div align="center">Modeling</div>
+## <div align="center">Modeling</div>
 
 ### 1. Support Vector Machine
 I was interested in building several different models and comparing their performance. I started with a relatively simple clustering method, SVM. There were a few steps to this method:</br>
@@ -414,6 +414,6 @@ Data augmentation increases the effective sample size of a dataset without actua
 
 ![alt_text]()</br>
 
-### <div align="center">Resources</div>
+## <div align="center">Resources</div>
 <sup>1</sup> https://www.kaggle.com/c/digit-recognizer<br/>
 <sup>2</sup> https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/
