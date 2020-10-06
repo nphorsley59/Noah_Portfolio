@@ -1,7 +1,7 @@
 # <div align="center">Noah's Data Science Portfolio</div>
 
 ## Table of Contents
-* [Predicting Passenger Survival - Classification]()
+* [Predicting Passenger Survival - Classification](https://github.com/nphorsley59/PORTFOLIO/blob/master/README.md#1-predicting-passenger-survival)
 * [Predicting Sale Price - Regression](https://github.com/nphorsley59/PORTFOLIO#1-predicting-house-sale-price)
 * [Modeling Population Growth - Simulation](https://github.com/nphorsley59/PORTFOLIO#2-modeling-population-growth)
 * [MNIST Digit Recognition - Clustering](https://github.com/nphorsley59/PORTFOLIO#3-mnist-digit-recognition) 
