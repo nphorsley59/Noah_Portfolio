@@ -15,9 +15,9 @@ Skills Demonstrated: *classification, ensemble learning, hyperparameter tuning, 
 Libraries and Programs: *Python, Jupyter Notebook, pandas, pivot_table, matplotlib, numpy, regex, sklearn, seaborn*<br/>
 
 ### <div align="center">Project Overview</div>
-Using the Titanic competition dataset available on Kaggle<sup>1</sup>, I created models to predict which passengers would survive the 1912 sinking of the Titanic. The dataset included passenger attributes such as Name, Age, Sex, and Class, as well as information about their trip, such as their Cabin, Embarkment Location, and Ticket Price. My top model scored 83% accuracy in cross-validation using a Soft Voting Classifier, which which would put me in the top 5% of Kaggle submissions.<br>
+Using the Titanic competition dataset available on Kaggle<sup>1</sup>, I created models to predict which passengers would survive the 1912 sinking of the Titanic. The dataset included passenger attributes such as Name, Age, Sex, and Class, as well as information about their trip, such as their Cabin, Embarkment Location, and Ticket Price. My top model scored 83% accuracy in cross-validation using a Soft Voting Classifier, which which would put me in the top 5% of Kaggle submissions. For a more in-depth look at this analysis, please refer to my [Jupyter Notebook](https://github.com/nphorsley59/Passenger_Survival/blob/master/Predicting_Passenger_Survival.ipynb).<br>
 
-### <div align="center">Exploratory Data Analysis</div>
+## <div align="center">Exploratory Data Analysis</div>
 ### 1. Explore Data Structure
 I began by learning some basics about the dataset (Figure 1). I wanted to know its shape (shape()), its column names (columns()), and its contents (sample(), describe(), info()).<br>
 
@@ -25,7 +25,7 @@ I began by learning some basics about the dataset (Figure 1). I wanted to know i
 
 ![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/data_sample.png "Data Sample")<br>
 
-Next, I inspected the distribution of each feature<sup>3</sup>. For numerical features, I calculated location (mean(), trimmed_mean(), median()) and variation (std(), mad()). For categorical features, I inspected distribution using counts and proportions (value_counts()).<br>
+Next, I inspected the distribution of each feature<sup>3</sup>. For numerical features, I calculated location (mean(), trimmed_mean(), median()) and variation (std(), mad()), and for categorical features, I inspected distribution using counts and proportions (value_counts()).<br>
 
 **Figure 2.** A kernel density estimation of the distribution of passenger fare and a pie chart of the distribution of passenger class.<br>
 
@@ -40,7 +40,7 @@ For this dataset, I needed to:<br>
 - Split 'Name' into title and last name<br>
 - Use 'Ticket', 'ParCh', and 'SibSp' to determine if passengers were traveling alone or in a group<br>
 - Apply log(x+1) transformation to 'Fare' to fix right-skew<br>
-- Streamline (drop/rename columns, change dtypes, etc)<br>
+- Streamline the dataset(drop/rename columns, change dtypes, etc)<br>
 
 #### 2.1. Complete Columns with NaNs
 I mapped NaNs and completed columns that had relatively straight-forward solutions. I assigned a placeholder value for NaNs in 'Cabin' and 'Age' until I could address them properly.<br>
@@ -60,7 +60,7 @@ I mapped NaNs and completed columns that had relatively straight-forward solutio
 ![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/name_split.png "Splitting 'Name'")<br>
 
 #### 2.4. Engineer 'GroupSize' and 'FamilySize'
-**Figure 6.** I counted ticket replicates to itentify non-familial groups and added 'ParCh' to 'SibSp' to identify familial groups.<br>
+**Figure 6.** I counted ticket replicates to identify non-familial groups and summed 'ParCh' to 'SibSp' to identify familial groups.<br>
 
 ![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/partysize_split.png "Engineering 'Connections'")<br>
 
@@ -80,7 +80,7 @@ Several features were strongly correlated, introducing collinearity into the mod
 
 A passenger's cabin assignment had little impact on their fate. Considering 'Cabin' and 'Deck' were unknown for ~80% of passengers in the dataset, I decided to drop these features from the analysis.<br>
 
-**Figure 9.** Survival rate based on various criteria describing a passengers connections on-board.<br>
+**Figure 9.** Survival rate based on various criteria describing a passenger's connections on-board.<br>
 
 ![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/partysize_plot.png "Party Info Plot")<br>
 
@@ -105,7 +105,7 @@ While examining 'Fare' and how it related to other features, I noted two problem
 From this, I concluded that the fare for shared tickets must be a lump sum rather than an individual fare. I addressed this by dividing 'Fare' by 'GroupSize'. I also concluded that passengers with a ticket fare of $0.00 were crew members. They were all middle-aged males and almost all of them died. I addressed this by assigning them a new 'Class'.<br>
 
 #### 3.4. Multivariate Relationships
-I looked at a lot of multivariate relationships and included two figures that I found particularly interesting/informative. The age and sex of a passenger were strong predictors of survival; however, on top of that, class was arguably even more important. Age and sex can be condensed into title to show the relationship with class. I found this complex web of influence very interesting.
+I looked at many multivariate relationships and included figures for two that I found particularly interesting/informative. The age and sex of a passenger were strong predictors of survival; however, on top of that, class was arguably even more important. Age and sex can be condensed into title to show the relationship with class. I found this complex web of influence very interesting.
 
 **Figure 12.** Violin plot showing how the age and sex of a passenger influenced their chance of survival.<br>
 
@@ -115,9 +115,9 @@ I looked at a lot of multivariate relationships and included two figures that I 
 
 ![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/title_class.png "Title, Class, Survival")<br>
 
-I prepared the dataset for modeling by dropping uninformative columns, encoding all non-integer/non-float dtypes, splitting 'train' into a training and testing set for cross-validation, and scaling the data.<br>
+I prepared the dataset for modeling by dropping uninformative columns, encoding all non-integer/non-float data types, splitting 'train' into a training and testing set for cross-validation, and scaling the data.<br>
 
-### <div align="center">Modeling</div>
+## <div align="center">Modeling</div>
 My goal was to build a model that could accurately predict the fate of a passenger on the Titanic. Considering the simplicity of the dataset and the unquantifiable forces at play in the real event, I set a goal of 80% model accuracy.<br>
 
 ### 1. Pre-processing
@@ -145,22 +145,29 @@ I tested a range of classification algorithms, including Logistic Regression, Su
 ### 3. Ensemble Learning
 I used ensemble learning to construct models with the aggregate knowledge of many simpler models. Specifically, I used Random Forest (many Decision Trees) and a Voting Classifier (a mix of classification algorithms). I then scored and compared my models based on precision, recall, and accuracy.<br>
 
-**Figure 18.** The decision Boundary from Voting Classifier for 'Fare' and 'Age'. Only passengers that died are shown.<br>
+**Figure 18.** Feature importances generated by the Random Forest model.<br>
+
+![alt_text](https://github.com/nphorsley59/Passenger_Survival/blob/master/Figures/feature_importance.png "Feature Importance")<br>
+
+**Figure 19.** The decision Boundary from the Voting Classifier for 'Fare' and 'Age'. Only passengers that died are shown.<br>
 
 ![alt_text](https://github.com/nphorsley59/Passenger_Survival/blob/master/Figures/decision_boundary_death.png "Decision Boundary")<br>
 
-**Figure 19.** A bar chart showing model accuracy; one aspect of model selection.<br>
+**Figure 20.** A bar chart showing model accuracy, one of several scores used to determine model selection.<br>
 
 ![alt_text](https://github.com/nphorsley59/Passenger_Survival/blob/master/Figures/model_selection.png "Model Selection")<br>
 
 ### 4. Final Predictions
-The most balanced, high-scoring model used a Voting Classifier to predict passenger survival to 83% accuracy. It was better at predicting death than survival and struggled the most with false negatives.<br>
+The most balanced, high-scoring model used a Voting Classifier to predict passenger survival to 83% accuracy. It was better at predicting death than survival and struggled the most with false negatives. This model was used to predict survival in the 'test' set for submission.<br>
 
-**Figure 20.** A normalized confusion matrix for the Voting Classifier model.<br>
+**Figure 21.** A normalized confusion matrix for the Voting Classifier model.<br>
 
 ![alt_text](https://github.com/nphorsley59/Passenger_Survival/blob/master/Figures/conf_matrix.png "Confusion Matrix")
 
-### <div align="center">Resources</div>
+## <div align="center">Concluding Thoughts</div>
+This project was my first full-length analysis using classification algorithms and ensemble learning. I learned some new tools for visualizing these models and had a lot of fun seeing how different hyperparameters effected the predictions. I'm sure there is room for incremental improvement in this analysis, in both feature engineering and modeling, but I was generally quite satisfied with my results. Most other Kaggle submissions that used cross-verification (controls for overfitting) predicted survival to 75-80% accuracy. Moving forward, I'd like to work with other ensemble learning techniques, such as Gradient Boosting and stacking, and improve my EDA process to include a principle components analysis. Thanks for reading!<br>
+
+## <div align="center">Resources</div>
 <sup>1</sup> https://www.kaggle.com/c/titanic <br/>
 <sup>2</sup> https://www.encyclopedia-titanica.org/cabins.html <br/>
 <sup>3</sup> https://www.oreilly.com/library/view/practical-statistics-for/9781492072935/ <br>
