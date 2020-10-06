@@ -18,7 +18,7 @@ Libraries and Programs: *Python, Jupyter Notebook, pandas, pivot_table, matplotl
 Using the Titanic competition dataset available on Kaggle<sup>1</sup>, I created a model to predict which passengers would survive the 1912 sinking of the Titanic. The dataset included passenger attributes such as Name, Age, Sex, and Class, as well as information about their trip, such as their Cabin, Embarkment Location, and Ticket Price.<br>
 
 ### <div align="center">Exploratory Data Analysis</div>
-#### 1. Explore Data Structure
+### 1. Explore Data Structure
 I began by learning some basics about the dataset (Figure 1). I wanted to know its shape (shape()), its column names (columns()), and its contents (sample(), describe(), info()).<br>
 
 **Figure 1.** A sample of ten rows from the training set.<br>
@@ -31,7 +31,7 @@ Next, I inspected the distribution of each feature<sup>3</sup>. For numerical fe
 
 ![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/dist_classandfare.jpg "Feature Distributions")<br>
 
-#### 2. Clean and Organize
+### 2. Clean and Organize
 I identified several issues while exploring the dataset. I prefer to clean these up before exploring relationships between variables.<br>
 
 For this dataset, I needed to:<br>
@@ -42,36 +42,36 @@ For this dataset, I needed to:<br>
 - Apply log(x+1) transformation to 'Fare' to fix right-skew<br>
 - Streamline (drop/rename columns, change dtypes, etc)<br>
 
-##### 2.1. Complete Columns with NaNs
+#### 2.1. Complete Columns with NaNs
 I mapped NaNs and completed columns that had relatively straight-forward solutions. I assigned a placeholder value for NaNs in 'Cabin' and 'Age' until I could address them properly.<br>
 
 **Figure 3.** Tables showing NaNs by feature for the 'train' and 'test' datasets.<br>
 
 ![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/null_tables.png "NULL value Tables")<br>
 
-##### 2.2. Split 'Cabin'
+#### 2.2. Split 'Cabin'
 **Figure 4.** I used the string matching libarary, re, to parse deck and cabin number from 'Cabin'.<br>
 
 ![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/cabin_split.png "Splitting 'Cabin'")<br>
 
-##### 2.3. Split 'Name'
+#### 2.3. Split 'Name'
 **Figure 5.** I parsed 'Title' and 'Last' from 'Name' and reduced low frequency 'Title' results ("Col", "Jonkheer", "Rev") to "Other".<br>
 
 ![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/name_split.png "Splitting 'Name'")<br>
 
-##### 2.4. Engineer 'GroupSize' and 'FamilySize'
+#### 2.4. Engineer 'GroupSize' and 'FamilySize'
 **Figure 6.** I counted ticket replicates to itentify non-familial groups and added 'ParCh' to 'SibSp' to identify familial groups.<br>
 
 ![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/partysize_split.png "Engineering 'Connections'")<br>
 
-#### 3. Examine Relationships
+### 3. Examine Relationships
 I concluded by exploring how features were related to the target, 'Survived', and to each other. Before looking at individual features, I constructed a correlation matrix and visualized it as a heatmap.<br>
 
 **Figure 7.** Correlation coefficients for linear relationships between features.<br>
 
 ![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/corr_heatmap2.png "Correlation Heatmap")<br>
 
-##### 3.1. Collinearity
+#### 3.1. Collinearity
 Several features were strongly correlated, introducing collinearity into the model. I explored them further to determine which were appropriate to keep, drop, or engineer for analysis.<br>
 
 **Figure 8.** A swarm plot of deck and cabin assignments as well as the fate of their occupants.<br>
@@ -86,14 +86,14 @@ A passenger's cabin assignment had little impact on their fate. Considering 'Cab
 
 I found that being alone or being in a group of more than four seemed to decrease a passenger's chance of surviving. I engineered a new feature, 'Connections', and binned it based on these findings (group size of 1, 2-4, and >4).
 
-##### 3.2. Complete 'Age'
+#### 3.2. Complete 'Age'
 Passenger age was unknown for ~20% of the dataset. I grouped passengers with known age by 'Sex', 'Title', and 'Class' - features correlated with 'Age' - and calculated the median age for each combination. Then, to complete 'Age', I filled all passenger records of unknown age with the appropriate group median (matching 'Sex', 'Title' and 'Class'). I got this idea from a Kaggle notebook by Manav Sehgal<sup>4</sup>.
 
 **Figure 10.** The loop used to complete 'Age'.<br>
 
 ![alt_text](https://github.com/nphorsley59/Predicting_Passenger_Survival/blob/master/Figures/age_code.png "Completing 'Age'")<br>
 
-##### 3.3. Address 'Fare' Distribution
+#### 3.3. Address 'Fare' Distribution
 While examining 'Fare' and how it related to other features, I noted two problems:<br>
 - A handful of passengers had a ticket fare of $0.00<br>
 - Passengers who shared tickets paid more than the average fare for their class<br>
@@ -104,7 +104,7 @@ While examining 'Fare' and how it related to other features, I noted two problem
 
 From this, I concluded that the fare for shared tickets must be a lump sum rather than an individual fare. I addressed this by dividing 'Fare' by 'GroupSize'. I also concluded that passengers with a ticket fare of $0.00 were crew members. They were all middle-aged males and almost all of them died. I addressed this by assigning them a new 'Class'.<br>
 
-##### 3.4. Multivariate Relationships
+#### 3.4. Multivariate Relationships
 I looked at a lot of multivariate relationships and included two figures that I found particularly interesting/informative. The age and sex of a passenger were strong predictors of survival; however, on top of that, class was arguably even more important. Age and sex can be condensed into title to show the relationship with class. I found this complex web of influence very interesting.
 
 **Figure 12.** Violin plot showing how the age and sex of a passenger influenced their chance of survival.<br>
@@ -120,7 +120,7 @@ I prepared the dataset for modeling by dropping uninformative columns, encoding 
 ### <div align="center">Modeling</div>
 My goal was to build a model that could accurately predict the fate of a passenger on the Titanic. Considering the simplicity of the dataset and the unquantifiable forces at play in the real event, I set a goal of 80% model accuracy.<br>
 
-#### 1. Pre-processing
+### 1. Pre-processing
 I prepared the dataset for modeling by dropping uninformative columns, encoding all non-integer/non-float dtypes, splitting 'train' into a training and testing set for cross-validation, and scaling the data.<br>
 
 **Figure 14.** A sample from the streamlined 'train' set, pre-scaling.<br>
@@ -131,7 +131,7 @@ I prepared the dataset for modeling by dropping uninformative columns, encoding 
 
 ![alt_text](https://github.com/nphorsley59/Passenger_Survival/blob/master/Figures/train_test_scale.png "Split and Scale")<br>
 
-#### 2. Classification
+### 2. Classification
 I tested a range of classification algorithms, including Logistic Regression, Support Vector Machine, K-nearest Neighbors, and Decision Tree<sup>5</sup>. I used the training set to fit the model and the testing set to predict survival and score model accuracy (classification_report()). I also used GridSearchCV() to tune the hyperparameters for each model.<br>
 
 **Figure 16.** Code used to fit and score a Logistic Regression model.<br>
@@ -142,7 +142,7 @@ I tested a range of classification algorithms, including Logistic Regression, Su
 
 ![alt_text](https://github.com/nphorsley59/Passenger_Survival/blob/master/Figures/grid_search.png "Tuning Hyperparameters")<br>
 
-#### 3. Ensemble Learning
+### 3. Ensemble Learning
 I used ensemble learning to construct models with the aggregate knowledge of many simpler models. Specifically, I used Random Forest (many Decision Trees) and a Voting Classifier (a mix of classification algorithms). I then scored and compared my models based on precision, recall, and accuracy.<br>
 
 **Figure 18.** The decision Boundary from Voting Classifier for 'Fare' and 'Age'. Only passengers that died are shown.<br>
@@ -153,7 +153,7 @@ I used ensemble learning to construct models with the aggregate knowledge of man
 
 ![alt_text](https://github.com/nphorsley59/Passenger_Survival/blob/master/Figures/model_selection.png "Model Selection")<br>
 
-#### 4. Final Predictions
+### 4. Final Predictions
 The most balanced, high-scoring model used a Voting Classifier to predict passenger survival to 83% accuracy. It was better at predicting death than survival and struggled the most with false negatives.<br>
 
 **Figure 20.** A normalized confusion matrix for the Voting Classifier model.<br>
@@ -178,7 +178,7 @@ Using a competition dataset available on Kaggle<sup>1</sup>, I created a model t
 
 ### <div align="center">Data Preparation</div>
 
-#### 1. Exploration
+### 1. Exploration
 I began by familiarizing myself with the Ames, Iowa housing dataset. It was divided into a [train](https://github.com/nphorsley59/House_Prices/blob/master/train.csv) and [test](https://github.com/nphorsley59/House_Prices/blob/master/test.csv) sample, each consisting of roughly 1,500 entries. Each entry held 78 features characterizing the house, lot, and surrounding area. It was the explicit goal of the competition to use the "train" sample (where 'Sale Price' was provided) to predict the 'Sale Price' of houses in the "test" sample.<br />
 
 Due to the complexity of the dataset (Figure 1), a [detailed description](https://github.com/nphorsley59/House_Prices/blob/master/Data_Description.txt) of each of the 78 features was included. I reviewed this information and broke down the full feature list by type (numerical vs categorical) and role (building i.e. describes physical characteristics of house, space i.e. describes size of house, and location i.e. describes the surrounding area) in an [Excel spreadsheet](https://github.com/nphorsley59/House_Prices/blob/master/Feature_Log.xlsx). I also made predictions about the influence of each feature and 'Sale Price' and kept notes throughout the analysis process.<br />
@@ -187,7 +187,7 @@ Due to the complexity of the dataset (Figure 1), a [detailed description](https:
 
 ![alt_text](https://github.com/nphorsley59/Predicting_Sale_Price/blob/master/Figures/Train_Shape.png "Raw Train Dataset")
 
-#### 2. Cleaning
+### 2. Cleaning
 I addressed several major issues during the cleaning process. First, missing values were widespread in both samples (Figure 2). I assigned a value of 'None' or '0' when 'NaN' clearly represented an entry that lacked the described feature (i.e. 'GarageType' for a house that doesn't have a garage). I dealt with other missing values on a feature-by-feature basis, using whichever method was appropriate. Second, I checked each entry for inconsistencies among shared features (i.e. 'GarageYrBlt', 'GarageFinish', 'GarageQual', etc. all describe a garage). Finally, I checked for typos and dropped uninformative features. Most of the cleaning required for this dataset was fairly lightweight, especially in the "train" sample.<br />
 
 NOTE: The full dataset remained separated into "train" and "test" samples for cleaning to avoid [data leakage](https://machinelearningmastery.com/data-leakage-machine-learning/).<br />
@@ -196,7 +196,7 @@ NOTE: The full dataset remained separated into "train" and "test" samples for cl
 
 ![alt_text](https://github.com/nphorsley59/House_Prices/blob/master/Figures/MissingData.png "Missing Data")
 
-#### 3. Feature Engineering
+### 3. Feature Engineering
 The purpose of this step was to simplify the dataset, create new features that could inform the model, and ensure the structure of each feature was conducive to analysis. I began by merging the "train" and "test" samples to ensure changes were reflected in both. I then removed several uninformative features, including 'Id', 'Utilities', and 'PoolQC', and changed the data type for several others. I only wanted to keep features that could influence Sale Price, were known for most of the dataset, and contained variation. I also wanted to ensure the data type reflected the substance of the feature. The final step was to encode the heirarchical features that were not already numeric (Figure 3). For example, 'BsmtQual' has a clear linear relationship with 'SalePrice'; higher quality basements are worth more money. Encoding allows the model to easily incorporate these features.
 
 **Figure 3.** Correcting data types and heirarchical encoding of non-numeric features.<br/>
@@ -230,7 +230,7 @@ I continued my exploratory data analysis by visualizing some of the qualitative 
 
 ### <div align="center">Normalize Data</div>
 
-#### 1. Response Variable
+### 1. Response Variable
 Before modeling, I checked the distribution and normality of my data. This was especially important for the response (target) variable, so that's where I began. I found that 'SalePrice' was skewed left quite significantly (Figure 8). To fix this, I performed a log(x+1) transformation (Figure 9).<br/>
 
 **Figure 8.** The raw distribution (blue curve) of 'SalePrice' compared with a normal distribution (black curve).<br/>
@@ -241,7 +241,7 @@ Before modeling, I checked the distribution and normality of my data. This was e
 
 ![alt_text](https://github.com/nphorsley59/Predicting_Sale_Price/blob/master/Figures/Log_Distribution.png "Log-Transformed Distribution")<br/>
 
-#### 2. Explanatory Variables
+### 2. Explanatory Variables
 I was also interested in tranforming particularly skewed explanatory variables (features). I set a cutoff of skew >= 1 and used a Box Cox transformation. I visually inspected my strongest predictors from my exploratory data analysis and was satisfied with the results (Figure 10). Notice that the heteroscedasticity noted earlier has been corrected.<br/>
 
 **Figure 10.** Scatterplot of 'GrLivArea' and 'SalePrice' after a Box Cox transformation.<br/>
@@ -250,10 +250,10 @@ I was also interested in tranforming particularly skewed explanatory variables (
 
 ### <div align="center">Regression Modeling</div>
 
-#### 1. Preparation
+### 1. Preparation
 A few final steps were required to prepare the dataset for training and testing models. First, I turned all qualitative features into [dummy variables](https://en.wikipedia.org/wiki/Dummy_variable_(statistics)). Then, I separated the "test" data from the "train" data; 'SalePrice' is unknown for the "test" data, so it won't be helpful for model building. Finally, I further separated the "train" data into a "train" group and a "test" group. The "train" group was used to inform the model and the "test" group was used to test the model's accuracy. I did this step manually to create visualizations, but when actually testing models this was replaced with automated [cross-validation](https://towardsdatascience.com/cross-validation-in-machine-learning-72924a69872f) executed by a custom function.
 
-#### 2. Building and Testing Models
+### 2. Building and Testing Models
 I chose to mostly use regularized linear models due to the complexity of the dataset<sup>2</sup>. These types of models help reduce overfitting. I also preprocessed the data using [RobustScaler()](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.RobustScaler.html) to reduce the influence of outliers that weren't manually removed. This resulted in a Ridge Regression model, Lasso Regression model, and an Elastic Net Regression model, which each use different techniques for constraining the weights of the parameters (Figure 11). In addition to regularized linear models, I used a Gradient Boost algorithm, which essentially compares predictors to their predecessors and learns from the errors. Each of these models performed fairly well, producing RMSE (root mean square error) values around 0.10-0.15.<br/>
 
 **Figure 11.** Visual comparison of the performance of four unique models built using machine learning algorithms.<br/>
@@ -262,7 +262,7 @@ I chose to mostly use regularized linear models due to the complexity of the dat
 
 To test these models more rigorously, I used a cross-validation function inspired by Serigne's notebook<sup>3</sup> on Kaggle (Figure 12).
 
-#### 3. Stacking Models
+### 3. Stacking Models
 Stacking is an [ensemble method](https://towardsdatascience.com/ensemble-methods-in-machine-learning-what-are-they-and-why-use-them-68ec3f9fef5f#:~:text=Ensemble%20methods%20is%20a%20machine,machine%20learning%20and%20model%20building.) that can improve the accuracy of model predictions by combining the strenghts of multiple models. This is an advanced method that I am still in the process of learning (it is not supported by scikit-learn) and implementing. I am also not sure it is entirely necessary for this dataset.
 
 ### <div align="center">Submission</div>
@@ -288,16 +288,16 @@ As part of my Master's thesis, I built a partial life-cycle matrix model<sup>1</
 
 ### <div align="center">Model Structure</div>
 
-#### Stage 1
+### Stage 1
 The first modeling stage simulates population growth over a pre-defined trial period to transform a single population variable into an array representing stable age distribution. 
 
-#### Stage 2
+### Stage 2
 The second modeling stage proportionally adjusts the stable age distribution array to represent the desired initial population size. From here, population growth is simulated over the length of time defined by the user.
 
-#### Stage 3
+### Stage 3
 The third and final modeling stage averages annual population size and growth over the number of simulations defined by the user. It then plots mean population size with confidence intervals and calculates an annual trend estimate.
 
-#### Additional Features
+### Additional Features
 The three stages outlined above describe the most simplistic modeling approach. More details can be found in the PLC_MatrixModel_AddFeat.txt file included in my Portfolio repository.
 
 ### <div align="center">Results</div>
@@ -331,6 +331,7 @@ For my thesis, we used established demographic rates from the literature and est
 
 **Figure 2.** A sample of simulations produced by the model, replicating projected decline in Illinois.<br />
 ![alt text](https://github.com/nphorsley59/Population_Growth_Modeling/blob/master/Figures/livesim_plot_24sims.gif "Simulation Animation")
+
 ### <div align="center">Summary</div>
 
 The partial life-cycle matrix model I built for my Master's thesis was used to project population decline in my study species, the Common Grackle, and to predict rates of non-breeding season survival for three distinct populations: a stable population, the current global population, and the current Illinois population. The modeling approach I chose allowed me to use many demographic parameters and account for realistic environmental variation. I learned a lot about model design, custom functions, and advanced visualization techniques from this project and am excited to reuse the model to answer other research questions in the future.
@@ -357,7 +358,7 @@ Preparing the MNIST dataset for analysis was relatively straight-forward. Even t
 
 ### <div align="center">Modeling</div>
 
-#### 1. Support Vector Machine
+### 1. Support Vector Machine
 I was interested in building several different models and comparing their performance. I started with a relatively simple clustering method, SVM. There were a few steps to this method:</br>
 1) shuffle the 'train' rows</br>
 2) split 'train' into Train and Test sets</br>
@@ -372,7 +373,7 @@ I was interested in building several different models and comparing their perfor
 
 The SVM model tested surprisingly well. Most digits were identified correctly (the numbers on the diagonal). However, the model did struggle to identify 8's and often misidentified digits as 2's. It also only had about 95% accuracy; good but not great.</br>
 
-#### 2. K-nearest Neighbors
+### 2. K-nearest Neighbors
 K-nearest Neighbors (KNN) is another commonly used clustering algorithm. Similar to SVM, I split this analysis into several steps:</br>
 1) shuffle the 'train' rows</br> 
 2) split 'train' into Train and Test sets</br>
