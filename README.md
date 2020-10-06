@@ -177,7 +177,7 @@ This project was my first full-length analysis using classification algorithms a
 
 ## 2. Predicting House Sale Price
 
-Skills Demonstrated: *machine learning, linear regression, data transformation, exploratory data analysis*<br/>
+Skills Demonstrated: *regularized regression, gradient boosting, data transformation and scaling, exploratory data analysis*<br/>
 Libraries and Programs: *Python, Jupyter Notebook, matplotlib, numpy, pandas, scipy, seaborn, sklearn*<br/>
 
 ### <div align="center">Project Overview</div>
@@ -351,7 +351,7 @@ The partial life-cycle matrix model I built for my Master's thesis was used to p
 
 ## 4. MNIST Digit Recognition
 ### <div align="center">Project Overview</div>
-Skills Demonstrated: *SVM, KNN, big data, model optimization, data augmentation*<br />
+Skills Demonstrated: *SVM, KNN, big data, model optimization, computer vision, data augmentation*<br />
 Libraries and Programs: *Python, Jupyter Notebook, matplotlib, numpy, pandas, scikit-learn, scipy, statistics*<br />
 
 Computer vision is a common application of machine learning algorithms. I used the MNIST dataset<sup>1</sup> to demonstrate the application of clustering methods<sup>2</sup> (SVM and KNN) to computer vision. The primary objective of the project was to train a model to recognize digital, black-and-white images of hand-written digits (0-9). My top model correctly identified >97% of the images in the 'test' dataset. For a more in-depth look at this analysis, please refer to my [Jupyter Notebook](https://github.com/nphorsley59/Handwritten_Digits/blob/master/digit_recognition_classifier.ipynb).
