@@ -5,7 +5,6 @@
 * [Predicting Sale Price - Regression](https://github.com/nphorsley59/PORTFOLIO#1-predicting-house-sale-price)
 * [Modeling Population Growth - Simulation](https://github.com/nphorsley59/PORTFOLIO#2-modeling-population-growth)
 * [MNIST Digit Recognition - Clustering](https://github.com/nphorsley59/PORTFOLIO#3-mnist-digit-recognition) 
-* [Monitoring Avian Diversity](https://github.com/nphorsley59/PORTFOLIO#4-monitoring-avian-diversity)
 
 <br/>
 
