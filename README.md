@@ -8,7 +8,7 @@
 
 <br/>
 
-# 1. Predicting Passenger Survival
+## 1. Predicting Passenger Survival
 
 Skills Demonstrated: *classification, ensemble learning, hyperparameter tuning, EDA, feature engineering*<br/>
 Libraries and Programs: *Python, Jupyter Notebook, pandas, pivot_table, matplotlib, numpy, regex, sklearn, seaborn*<br/>
@@ -175,7 +175,7 @@ This project was my first full-length analysis using classification algorithms a
 
 <br>
 
-# 2. Predicting House Sale Price
+## 2. Predicting House Sale Price
 
 Skills Demonstrated: *regularized regression, gradient boosting, data transformation and scaling, exploratory data analysis*<br/>
 Libraries and Programs: *Python, Jupyter Notebook, matplotlib, numpy, pandas, scipy, seaborn, sklearn*<br/>
@@ -223,7 +223,7 @@ Next, I explored my strongest quantitative predictors independently and removed 
 
 ![alt_text](https://github.com/nphorsley59/Predicting_Sale_Price/blob/master/Figures/LivingArea_Scatter1.png "Outliers")
 
-### <div align="center">Qualitative Features</div>
+## <div align="center">Qualitative Features</div>
 
 I continued my exploratory data analysis by visualizing some of the qualitative features I expected to influence 'SalePrice'. Several of these described the location of the house and could be related, so I visualized them independently and together (Figure 6, 7). In general, I expected most qualitative features to have a weak influence on 'SalePrice' and found very few strong relationships.<br/>
 
@@ -235,7 +235,7 @@ I continued my exploratory data analysis by visualizing some of the qualitative 
 
 ![alt_text](https://github.com/nphorsley59/Predicting_Sale_Price/blob/master/Figures/NeighbrhdZoning.jpg "Qualitative Relationships")
 
-### <div align="center">Normalize Data</div>
+## <div align="center">Normalize Data</div>
 
 ### 1. Response Variable
 Before modeling, I checked the distribution and normality of my data. This was especially important for the response (target) variable, so that's where I began. I found that 'SalePrice' was skewed left quite significantly (Figure 8). To fix this, I performed a log(x+1) transformation (Figure 9).<br/>
@@ -255,7 +255,7 @@ I was also interested in tranforming particularly skewed explanatory variables (
 
 ![alt_text](https://github.com/nphorsley59/Predicting_Sale_Price/blob/master/Figures/LivingArea_Scatter3.jpg)
 
-### <div align="center">Regression Modeling</div>
+## <div align="center">Regression Modeling</div>
 
 ### 1. Preparation
 A few final steps were required to prepare the dataset for training and testing models. First, I turned all qualitative features into [dummy variables](https://en.wikipedia.org/wiki/Dummy_variable_(statistics)). Then, I separated the "test" data from the "train" data; 'SalePrice' is unknown for the "test" data, so it won't be helpful for model building. Finally, I further separated the "train" data into a "train" group and a "test" group. The "train" group was used to inform the model and the "test" group was used to test the model's accuracy. I did this step manually to create visualizations, but when actually testing models this was replaced with automated [cross-validation](https://towardsdatascience.com/cross-validation-in-machine-learning-72924a69872f) executed by a custom function.
@@ -272,14 +272,14 @@ To test these models more rigorously, I used a cross-validation function inspire
 ### 3. Stacking Models
 Stacking is an [ensemble method](https://towardsdatascience.com/ensemble-methods-in-machine-learning-what-are-they-and-why-use-them-68ec3f9fef5f#:~:text=Ensemble%20methods%20is%20a%20machine,machine%20learning%20and%20model%20building.) that can improve the accuracy of model predictions by combining the strenghts of multiple models. This is an advanced method that I am still in the process of learning (it is not supported by scikit-learn) and implementing. I am also not sure it is entirely necessary for this dataset.
 
-### <div align="center">Submission</div>
+## <div align="center">Submission</div>
 Now that I had several relatively accurate models, I used the model with the best cross-validation score to predict 'SalePrice' for the "test" sample. I included the [results](https://github.com/nphorsley59/Predicting_Sale_Price/blob/master/submission.csv) as a csv in this repository. Unfortunately, because this dataset was a competition dataset, I could not directly test the final accuracy of my model. I did find that the distribution of my 'SalePrice' predictions closely matched the distribution of 'SalePrice' for the training dataset (Figure 12). I considered this to be support for the strength of my model.<br/>
 
 **Figure 12.** Comparison of 'SalePrice' distribution between the "train" and predicted "test" samples.<br/>
 
 ![alt_text](https://github.com/nphorsley59/Predicting_Sale_Price/blob/master/Figures/submission_comparison.jpg "Submission Comparison")
 
-### <div align="center">Resources</div>
+## <div align="center">Resources</div>
 <sup>1</sup> https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview<br/>
 <sup>2</sup> https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/<br/>
 <sup>3</sup> https://www.kaggle.com/serigne/stacked-regressions-top-4-on-leaderboard<br/>
