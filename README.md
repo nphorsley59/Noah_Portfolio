@@ -8,12 +8,12 @@
 
 <br/>
 
-## 1. Predicting Passenger Survival
+# 1. Predicting Passenger Survival
 
 Skills Demonstrated: *classification, ensemble learning, hyperparameter tuning, EDA, feature engineering*<br/>
 Libraries and Programs: *Python, Jupyter Notebook, pandas, pivot_table, matplotlib, numpy, regex, sklearn, seaborn*<br/>
 
-### <div align="center">Project Overview</div>
+## <div align="center">Project Overview</div>
 Using the Titanic competition dataset available on Kaggle<sup>1</sup>, I created models to predict which passengers would survive the 1912 sinking of the Titanic. The dataset included passenger attributes such as Name, Age, Sex, and Class, as well as information about their trip, such as their Cabin, Embarkment Location, and Ticket Price. My top model scored 83% accuracy in cross-validation using a Soft Voting Classifier, which which would put me in the top 5% of Kaggle submissions. For a more in-depth look at this analysis, please refer to my [Jupyter Notebook](https://github.com/nphorsley59/Passenger_Survival/blob/master/Predicting_Passenger_Survival.ipynb).<br>
 
 ## <div align="center">Exploratory Data Analysis</div>
@@ -175,15 +175,15 @@ This project was my first full-length analysis using classification algorithms a
 
 <br>
 
-## 2. Predicting House Sale Price
+# 2. Predicting House Sale Price
 
 Skills Demonstrated: *regularized regression, gradient boosting, data transformation and scaling, exploratory data analysis*<br/>
 Libraries and Programs: *Python, Jupyter Notebook, matplotlib, numpy, pandas, scipy, seaborn, sklearn*<br/>
 
-### <div align="center">Project Overview</div>
+## <div align="center">Project Overview</div>
 Using a competition dataset available on Kaggle<sup>1</sup>, I created a model that can predict the sale price of a house in Ames, Iowa from 79 explanatory variables (features). The purpose of this project was to demonstrate my ability to tackle a complex dataset and model the behavior of a target variable. For a more in-depth look at this analysis, please refer to my [Jupyter Notebook](https://github.com/nphorsley59/House_Prices/blob/master/House_Prices.ipynb).
 
-### <div align="center">Data Preparation</div>
+## <div align="center">Data Preparation</div>
 
 ### 1. Exploration
 I began by familiarizing myself with the Ames, Iowa housing dataset. It was divided into a [train](https://github.com/nphorsley59/House_Prices/blob/master/train.csv) and [test](https://github.com/nphorsley59/House_Prices/blob/master/test.csv) sample, each consisting of roughly 1,500 entries. Each entry held 78 features characterizing the house, lot, and surrounding area. It was the explicit goal of the competition to use the "train" sample (where 'Sale Price' was provided) to predict the 'Sale Price' of houses in the "test" sample.<br />
@@ -210,7 +210,7 @@ The purpose of this step was to simplify the dataset, create new features that c
 
 ![alt_text](https://github.com/nphorsley59/Predicting_Sale_Price/blob/master/Figures/Heir_Encoding.png "Feature Engineering")
 
-### <div align="center">Quantitative Features</div>
+## <div align="center">Quantitative Features</div>
 Now that the dataset had been cleaned and organized, it was time for an exploratory data analysis. This is especially valuable in such a large, complex dataset, where a few features may hold most of the predictive power for 'SalePrice'. I started by making a correlation heatmap of the quantitative features (Figure 4). 'OverallQual', 'GrLivArea', and 'ExterQual' came out as the strongest quantitative predictors of 'SalePrice'. These features will undoubtedly play a significant role in my regression model. I also noted strong relationships between 'TotRmsAbvGrd' and 'GrLivArea', 'FullBath' and 'TotBath', '1stFlrSF' and 'TotalBsmtSF', and 'GarageArea' and 'GarageCars'. In each of these cases, I should consider removing the weaker predictor from the dataset.<br/>
 
 **Figure 4.** A correlation heatmap of all quantitative features, showing meaningful predictive features and potential multicollinearity.<br/>
